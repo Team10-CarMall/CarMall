@@ -31,7 +31,7 @@ CREATE TABLE `t_address` (
   `version` smallint DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE KEY `idx_userId` (`user_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of t_address
@@ -43,13 +43,13 @@ CREATE TABLE `t_address` (
 DROP TABLE IF EXISTS `t_dic_sub_type`;
 CREATE TABLE `t_dic_sub_type` (
   `id` int NOT NULL AUTO_INCREMENT COMMENT '主键',
-  `text` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '商品二级分类的中文描述',
-  `value` char(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '商品二级分类的值',
-  `order` char(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '用于排序',
+  `text` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT '商品二级分类的中文描述',
+  `value` char(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT '商品二级分类的值',
+  `order` char(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT '用于排序',
   `parent_id` int DEFAULT NULL COMMENT '父类型的id值',
   `enable` tinyint(1) DEFAULT '1' COMMENT '是否启用 1启用，0禁用',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of t_dic_sub_type
@@ -66,7 +66,7 @@ CREATE TABLE `t_dic_type` (
   `order` char(2) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '用于排序',
   `enable` tinyint(1) DEFAULT '1' COMMENT '是否启用，1启用，0禁用',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of t_dic_type
@@ -84,18 +84,18 @@ CREATE TABLE `t_goods` (
   `pic_url2` varchar(150) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '商品图片2',
   `union_id` int DEFAULT NULL COMMENT '商品的集合id，将不同规格的商品联系起来',
   `color` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '商品颜色,文字描述',
-  `state` char(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '商品状态，0表示下架了，1表示可以购买,  2表示售罄了',
+  `state` char(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT '商品状态，0表示下架了，1表示可以购买,  2表示售罄了',
   `sale_num` int DEFAULT NULL COMMENT '该款商品的销售数量',
   `goods_price` decimal(10,2) DEFAULT NULL COMMENT '商品单价',
   `create_time` char(19) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '商品创建时间',
-  `edit_time` char(19) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '修改时间',
+  `edit_time` char(19) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT '修改时间',
   `version` smallint DEFAULT '1',
-  `user_id` char(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '用户的id user+10000',
+  `user_id` char(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT '用户的id user+10000',
   PRIMARY KEY (`id`) USING BTREE,
   KEY `idx_createTime` (`create_time`),
   KEY `idx_userId` (`user_id`),
   KEY `idx_goodsId` (`goods_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of t_goods
@@ -112,7 +112,7 @@ CREATE TABLE `t_goods_union` (
   PRIMARY KEY (`id`) USING BTREE,
   KEY `idx_subTypeId` (`sub_type_id`),
   KEY `idx_createTime` (`create_time`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of t_goods_union
@@ -124,12 +124,12 @@ CREATE TABLE `t_goods_union` (
 DROP TABLE IF EXISTS `t_log_controller`;
 CREATE TABLE `t_log_controller` (
   `id` int NOT NULL AUTO_INCREMENT COMMENT '主键id',
-  `controller` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '调用的接口路径',
-  `create_time` char(19) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '最近修改时间',
-  `user_id` char(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '什么用户产生的',
+  `controller` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT '调用的接口路径',
+  `create_time` char(19) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT '最近修改时间',
+  `user_id` char(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT '什么用户产生的',
   PRIMARY KEY (`id`) USING BTREE,
   KEY `idx_userId` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of t_log_controller
@@ -146,7 +146,7 @@ CREATE TABLE `t_log_exception` (
   `user_id` char(9) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '什么用户产生的',
   PRIMARY KEY (`id`) USING BTREE,
   KEY `idx_userId` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of t_log_exception
@@ -175,7 +175,7 @@ CREATE TABLE `t_order` (
   KEY `idx_userId` (`user_id`),
   KEY `idx_orderId` (`order_id`) USING BTREE,
   KEY `idx_goodsId` (`goods_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of t_order
@@ -187,7 +187,7 @@ CREATE TABLE `t_order` (
 DROP TABLE IF EXISTS `t_user`;
 CREATE TABLE `t_user` (
   `id` int NOT NULL AUTO_INCREMENT COMMENT '主键id',
-  `user_id` char(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT 'user+10000递增',
+  `user_id` char(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT 'user+10000递增',
   `username` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '用户名',
   `password` char(32) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '用户密码，md5加密的32位',
   `description` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '用户个人描述',
@@ -195,11 +195,11 @@ CREATE TABLE `t_user` (
   `create_time` char(19) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '用户账号的创建时间',
   `edit_time` char(19) DEFAULT NULL,
   `version` smallint DEFAULT '1',
-  `state` char(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '保留字段，用于判断当前用户的状态，0表示账号异常，1表示账号正常，2表示账号有风险',
+  `state` char(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT '保留字段，用于判断当前用户的状态，0表示账号异常，1表示账号正常，2表示账号有风险',
   PRIMARY KEY (`id`) USING BTREE,
   KEY `idx_userId` (`user_id`) USING BTREE,
   KEY `idx_createTime` (`create_time`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of t_user
@@ -217,7 +217,7 @@ CREATE TABLE `t_user_collection` (
   `edit_time` char(19) DEFAULT NULL,
   `version` smallint DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of t_user_collection
