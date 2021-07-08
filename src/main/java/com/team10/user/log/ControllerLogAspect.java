@@ -2,6 +2,7 @@ package com.team10.user.log;
 
 import com.team10.user.model.ControllerLog;
 import com.team10.user.service.ControllerLogService;
+import com.team10.util.TimeUtil;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
@@ -10,7 +11,6 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
 import java.util.Date;
 
@@ -57,7 +57,7 @@ public class ControllerLogAspect {
 //        String params = JSON.toJSONString(args);
 //        sysLog.setParams(params);
 
-        crlLog.setUpgradeTime(new Date());
+        crlLog.setCreateTime(TimeUtil.getSystemTime());
         //获取用户名
         //TODO
         crlLog.setUserId("ly");
