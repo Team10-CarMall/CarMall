@@ -3,5 +3,15 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.team10.settings.mapper.DicTypeMapper">
-
+    <select id="getGoodsType" parameterType="java.lang.Boolean" resultType="com.team10.settings.model.DicType">
+        select
+            dt.id,
+            dt.text,
+            dt.value,
+            dt.order
+        from
+            t_dic_type dt
+        where
+            dt.enable = #{enable}
+    </select>
 </mapper>

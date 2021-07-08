@@ -3,6 +3,7 @@ package com.team10.settings.service;
 import com.team10.settings.model.DicType;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Author LINZHIPIN
@@ -10,5 +11,6 @@ import java.util.List;
  */
 public interface DicService {
 
-	List<DicType> getGoodsType();
+
+	Map<String, Object> getGoodsType(Boolean enable);
 }
