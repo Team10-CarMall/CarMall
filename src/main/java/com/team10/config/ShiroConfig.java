@@ -1,6 +1,6 @@
 package com.team10.config;
 
-import com.kotori.springboot.server.service.CustomRealm;
+import com.team10.user.realm.CustomRealm;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.context.annotation.Bean;
