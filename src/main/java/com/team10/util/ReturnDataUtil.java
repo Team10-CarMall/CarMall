@@ -26,7 +26,6 @@ public class ReturnDataUtil {
 
 	/**
 	 * 默认是操作成功，code是SUCCESS
-	 * 如果返回的数据是空的话，返回的code 是SUCCESS_NONE
 	 * @param msg : 返回的说明
 	 * @param data :返回的数据
 	 * */
