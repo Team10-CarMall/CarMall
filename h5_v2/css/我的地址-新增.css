@@ -1,0 +1,86 @@
+body{
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;  
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: PingFangSC;
+    color: #333;
+    line-height: 1.5;
+    -webkit-tap-highlight-color: transparent;
+    background-color:#fff;
+    
+}
+a{
+    text-decoration: none;
+}
+.blank{
+    height: 20px;
+    background-color: #fff;
+}
+div{
+    box-sizing: border-box;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.banner{
+    height: 44px;
+    width: 100%;
+    background-color: #FFFFFF;
+    text-align: center;
+    line-height: 44px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #333333;
+    border-bottom: 1px solid #F6F6F6;
+}
+.banner .left-logo{
+    position:absolute;
+    left: 10px;
+    top: 22px;
+    width: 23px;
+    height: 25px;
+    color:#333333;
+}
+.banner .left-logo img{
+    width: 17px;
+    height: 17px;
+}
+.txt li{
+    height: 48.24px;
+    width: 311px;
+    margin: 6px auto;
+    border-bottom: 1px solid #EDEDED;
+}
+.txt li span{
+    width: 22px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #222222;
+    line-height: 48.24px;
+}
+.txt li input{
+    margin-left: 10px;
+    border:0;
+    width: 216px;
+    height: 22px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #999999;
+}
+.down{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+.btn{
+    width: 319px;
+    height: 44px;
+    margin-bottom: 15px;
+    background: #FFCC32;
+    border: 0;
+    border-radius: 20px;
+}

@@ -1,0 +1,151 @@
+
+body{
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;  
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: PingFangSC;
+    color: #333;
+    line-height: 1.5;
+    -webkit-tap-highlight-color: transparent;
+    background-color: #fff;
+    
+}
+a{
+    text-decoration: none;
+}
+.blank{
+    height: 20px;
+}
+div{
+    box-sizing: border-box;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.banner{
+    height: 44px;
+    width: 100%;
+
+    text-align: center;
+    line-height: 44px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #333333;
+}
+.banner .left-logo{
+    position:absolute;
+    left: 10px;
+    top: 22px;
+    width: 23px;
+    height: 25px;
+    color:#333333;
+}
+.banner .left-logo img{
+    width: 17px;
+    height: 17px;
+}
+/* 分类导航 */
+.banner-classfy{
+    height: 40px;
+    background-color: pink;
+    border-bottom: 1px solid #F6F6F6;
+}
+/* 主要商品信息 */
+.classfy-good{
+    margin-top:10px;
+}
+.main_hd{
+    height: 44px;
+    width: 100%;
+    padding-left: 15px;
+    line-height: 44px;
+    size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+.mian_bd{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    width: 100%;
+}
+.mian_bd li{
+    flex: 0 0 46%;
+    height: 253px;
+    width: 46%;
+    margin-bottom: 8px;
+    background-color: #F6F6F6;
+}
+.mian_bd .img1{
+    height: 184px;
+    width: 100%;
+    background: url(../upload/车载电器.dpg);
+    background-size:100% 100%;
+}
+.mian_bd p{
+    height: 36px;
+    font-size: 13px;
+    overflow: hidden;
+    margin-top: 5px;
+    line-height: 16px;
+    margin-bottom: 3px;
+    padding: 0 4px;
+    color: #333;
+}
+.mian_bd .now_price{
+    color: #fa2c19;
+    display: inline-block;
+    padding: 0 90px 0 4px;
+    position: relative;
+    top: 1px;
+    height: 25px;
+    line-height: 25px;
+}
+.mian_bd .used_price{
+    position: relative;
+    font-size: 12px;
+    text-decoration:line-through;
+    color: #999999 ;
+}
+
+
+.blance{
+    height: 48px;
+}
+/* 底部菜单 */
+.bottom-footer{
+    position: fixed;
+    bottom: 0%;
+    z-index: 999;
+    display: flex;
+    justify-content:space-around;
+    height: 48px;
+    width: 100%;
+    background-color: #fff;
+}
+.bottom-footer a{
+    margin-top: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+}
+.bottom-footer .bottom-footer-icon1{
+    height: 24px;
+    width: 24px;
+    background: url(../img/商城.png) no-repeat;
+    background-size:24px 24px;
+}
+.bottom-footer .bottom-footer-icon2{
+    height: 24px;
+    width: 24px;
+    background: url(../img/个人.png) no-repeat;
+    background-size:24px 24px;
+}
+.bottom-footer .bottom-footer-font{
+    margin-top: 2px;
+    font-size: 10px;
+}
