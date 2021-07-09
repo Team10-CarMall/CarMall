@@ -1,9 +1,7 @@
 package com.team10.user.mapper;
 
 import com.team10.user.model.Address;
-import org.apache.ibatis.annotations.Mapper;
 
-@Mapper
 public interface AddressMapper {
     int deleteByPrimaryKey(Integer id);
 

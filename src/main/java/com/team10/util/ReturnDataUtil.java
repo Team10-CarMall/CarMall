@@ -16,7 +16,7 @@ public class ReturnDataUtil {
 	 * @param msg : 返回的说明
 	 * @param data :返回的数据
 	 * */
-	public static Map<String, Object> getReturnModel(Integer code, String msg, Object data) {
+	public static Map<String, Object> getReturnMap(Integer code, String msg, Object data) {
 		Map<String, Object> map = new HashMap<>();
 		map.put("code", code);
 		map.put("msg", msg);
@@ -26,11 +26,10 @@ public class ReturnDataUtil {
 
 	/**
 	 * 默认是操作成功，code是SUCCESS
-	 * 如果返回的数据是空的话，返回的code 是SUCCESS_NONE
 	 * @param msg : 返回的说明
 	 * @param data :返回的数据
 	 * */
-	public static Map<String, Object> getReturnModel(String msg, Object data) {
-		return getReturnModel(data == null ? ReturnCode.SUCCESS_NONE : ReturnCode.SUCCESS_NONE, msg, data);
+	public static Map<String, Object> getReturnMap(String msg, Object data) {
+		return getReturnMap(ReturnCode.SUCCESS, msg, data);
 	}
 }

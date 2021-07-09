@@ -1,6 +1,9 @@
 package com.team10.settings.mapper;
 
+import com.team10.settings.model.DicSubType;
 import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 /**
  * @Author LINZHIPIN
@@ -9,4 +12,5 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface DicSubTypeMapper {
 
+	List<DicSubType> getGoodsSubType(DicSubType dicSubType);
 }

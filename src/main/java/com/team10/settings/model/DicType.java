@@ -10,6 +10,15 @@ public class DicType {
 	private String value; //商品类型的值
 	private String order; //用于排序
 	private Boolean enable; //是否启用
+	private String picUrl;
+
+	public String getPicUrl() {
+		return picUrl;
+	}
+
+	public void setPicUrl(String picUrl) {
+		this.picUrl = picUrl;
+	}
 
 	public Integer getId() {
 		return id;

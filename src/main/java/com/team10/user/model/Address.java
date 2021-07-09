@@ -14,13 +14,9 @@ public class Address {
 
     private Integer userId;
 
-    private Boolean state;
+    private String state;
 
     private String createTime;
-
-    private String updateTime;
-
-    private Short version;
 
 
 }
