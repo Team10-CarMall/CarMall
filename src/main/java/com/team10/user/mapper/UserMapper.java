@@ -1,11 +1,21 @@
 package com.team10.user.mapper;
 
+import com.team10.user.model.User;
 import org.apache.ibatis.annotations.Mapper;
 
-/**
- * @Author LINZHIPIN
- * @CreateTime 2021/07/07/00007 0:59:43
- */
 @Mapper
 public interface UserMapper {
+    int deleteByPrimaryKey(Integer id);
+
+    int insert(User record);
+
+    int insertSelective(User record);
+
+    User selectByPrimaryKey(Integer id);
+
+    User selectByUsername(String username);
+
+    int updateByPrimaryKeySelective(User record);
+
+    int updateByPrimaryKey(User record);
 }
