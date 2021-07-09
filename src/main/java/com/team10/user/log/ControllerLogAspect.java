@@ -3,6 +3,7 @@ package com.team10.user.log;
 import com.team10.user.model.ControllerLog;
 import com.team10.user.service.ControllerLogService;
 import com.team10.util.TimeUtil;
+import com.team10.util.TokenUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
@@ -10,7 +11,11 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.lang.reflect.Method;
 import java.util.Date;
 
@@ -58,9 +63,11 @@ public class ControllerLogAspect {
 //        sysLog.setParams(params);
 
         crlLog.setCreateTime(TimeUtil.getSystemTime());
-        //获取用户名
+        //获取用户id
+        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+        String token = request.getHeader("token");
         //TODO
-        crlLog.setUserId("ly");
+        crlLog.setUserId(TokenUtils.getClaim(token,"id"));
 
 
         //调用service保存SysLog实体类到数据库

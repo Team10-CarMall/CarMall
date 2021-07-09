@@ -7,11 +7,13 @@
     <result column="phone" jdbcType="VARCHAR" property="phone" />
     <result column="addr" jdbcType="VARCHAR" property="addr" />
     <result column="user_id" jdbcType="INTEGER" property="userId" />
-    <result column="state" jdbcType="CHAR" property="state" />
+    <result column="state" jdbcType="BIT" property="state" />
     <result column="create_time" jdbcType="CHAR" property="createTime" />
+    <result column="update_time" jdbcType="CHAR" property="updateTime" />
+    <result column="version" jdbcType="SMALLINT" property="version" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, name, phone, addr, user_id, state, create_time
+    id, name, phone, addr, user_id, state, create_time, update_time, version
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -25,11 +27,11 @@
   </delete>
   <insert id="insert" parameterType="com.team10.user.model.Address">
     insert into t_address (id, name, phone, 
-      addr, user_id, state, create_time
-      )
+      addr, user_id, state, create_time, 
+      update_time, version)
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
-      #{addr,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, #{state,jdbcType=CHAR}, #{createTime,jdbcType=CHAR}
-      )
+      #{addr,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, #{state,jdbcType=BIT}, #{createTime,jdbcType=CHAR}, 
+      #{updateTime,jdbcType=CHAR}, #{version,jdbcType=SMALLINT})
   </insert>
   <insert id="insertSelective" parameterType="com.team10.user.model.Address">
     insert into t_address
@@ -55,6 +57,12 @@
       <if test="createTime != null">
         create_time,
       </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="version != null">
+        version,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -73,10 +81,16 @@
         #{userId,jdbcType=INTEGER},
       </if>
       <if test="state != null">
-        #{state,jdbcType=CHAR},
+        #{state,jdbcType=BIT},
       </if>
       <if test="createTime != null">
         #{createTime,jdbcType=CHAR},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=CHAR},
+      </if>
+      <if test="version != null">
+        #{version,jdbcType=SMALLINT},
       </if>
     </trim>
   </insert>
@@ -96,10 +110,16 @@
         user_id = #{userId,jdbcType=INTEGER},
       </if>
       <if test="state != null">
-        state = #{state,jdbcType=CHAR},
+        state = #{state,jdbcType=BIT},
       </if>
       <if test="createTime != null">
         create_time = #{createTime,jdbcType=CHAR},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=CHAR},
+      </if>
+      <if test="version != null">
+        version = #{version,jdbcType=SMALLINT},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -110,9 +130,10 @@
       phone = #{phone,jdbcType=VARCHAR},
       addr = #{addr,jdbcType=VARCHAR},
       user_id = #{userId,jdbcType=INTEGER},
-      state = #{state,jdbcType=CHAR},
-      create_time = #{createTime,jdbcType=CHAR}
+      state = #{state,jdbcType=BIT},
+      create_time = #{createTime,jdbcType=CHAR},
+      update_time = #{updateTime,jdbcType=CHAR},
+      version = #{version,jdbcType=SMALLINT}
     where id = #{id,jdbcType=INTEGER}
   </update>
-
 </mapper>

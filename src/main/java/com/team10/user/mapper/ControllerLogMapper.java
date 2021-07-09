@@ -13,6 +13,7 @@ public interface ControllerLogMapper {
 
     ControllerLog selectByPrimaryKey(Integer id);
 
+
     int updateByPrimaryKeySelective(ControllerLog record);
 
     int updateByPrimaryKey(ControllerLog record);

@@ -6,15 +6,22 @@ import lombok.Data;
 public class User {
     private Integer id;
 
+    private String userId;
+
     private String username;
 
     private String password;
 
     private String description;
 
-    private String createTime;
-
     private String picUrl;
 
+    private String createTime;
+
+    private String editTime;
+
+    private Short version;
+
+    private String state;
 
 }
