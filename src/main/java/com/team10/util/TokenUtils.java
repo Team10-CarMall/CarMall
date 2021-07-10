@@ -2,9 +2,7 @@ package com.team10.util;
 
 import io.jsonwebtoken.*;
 
-import java.security.Key;
 import java.util.Date;
-import java.util.UUID;
 
 public class TokenUtils {
     //过期时间（一天）

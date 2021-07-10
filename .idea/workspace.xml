@@ -19,20 +19,24 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dc38ec0-4e0d-4f62-9bcd-cb7bd965ae5e" name="Default Changelist" comment="7.10 10.11提交，全局异常捕获后需要记录异常信息还未实现">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/team10/config/PersistentTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/team10/user/mapper/UserCollectionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/team10/user/mapper/UserCollectionMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/team10/user/model/UserCollection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/team10/util/ServletUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_4_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_5_2.xml" afterDir="false" />
+    <list default="true" id="5dc38ec0-4e0d-4f62-9bcd-cb7bd965ae5e" name="Default Changelist" comment="7.10 13:47修改了收藏商品时的一些字段信息">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/team10/DemoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/team10/exception/HandleCacheException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/CarMallApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/CarMallApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/annotation/EmptyCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/annotation/NullCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/aspect/EmptyCheckAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/aspect/EmptyCheckAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/aspect/EmptyCheckAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/aspect/NullCheckAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/config/PersistentTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/config/PersistentTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/enumdemo/GoodsState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/enums/GoodsState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/enumdemo/OrderState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/enums/OrderState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/enumdemo/ReturnCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/enums/ReturnCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/enumdemo/UserState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/enums/UserState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/goods/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/goods/controller/GoodsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/settings/controller/DicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/settings/controller/DicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/util/SpringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/util/SpringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/user/mapper/UserCollectionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/user/mapper/UserCollectionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/user/model/UserCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/user/model/UserCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/user/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/util/ReturnDataUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/util/ReturnDataUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/util/TokenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/util/TokenUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,9 +47,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="Interface" />
         <option value="MyBatis-Mapper" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -140,7 +144,7 @@
       <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.CarMallApplication (1)">
+  <component name="RunManager" selected="Application.DemoTest">
     <configuration name="DemoTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.team10.DemoTest" />
       <module name="CarMall" />
@@ -187,8 +191,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.CarMallApplication (1)" />
         <item itemvalue="Application.DemoTest" />
+        <item itemvalue="Spring Boot.CarMallApplication (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +208,7 @@
       <workItem from="1625819066013" duration="4633000" />
       <workItem from="1625830982815" duration="9841000" />
       <workItem from="1625847487023" duration="4623000" />
-      <workItem from="1625879847561" duration="10441000" />
+      <workItem from="1625879847561" duration="21870000" />
     </task>
     <task id="LOCAL-00001" summary="7.9 16.31 提交">
       <created>1625820338348</created>
@@ -220,7 +224,21 @@
       <option name="project" value="LOCAL" />
       <updated>1625883145252</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="7.10 13:44修改了注释的名字，完成了部分定时任务">
+      <created>1625895919821</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1625895919821</updated>
+    </task>
+    <task id="LOCAL-00004" summary="7.10 13:47修改了收藏商品时的一些字段信息">
+      <created>1625896143838</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1625896143838</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,14 +314,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="7.9 16.31 提交" />
     <MESSAGE value="7.10 10.11提交，全局异常捕获后需要记录异常信息还未实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="7.10 10.11提交，全局异常捕获后需要记录异常信息还未实现" />
+    <MESSAGE value="7.10 13:44修改了注释的名字，完成了部分定时任务" />
+    <MESSAGE value="7.10 13:47修改了收藏商品时的一些字段信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="7.10 13:47修改了收藏商品时的一些字段信息" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="642" y="134" key="#com.intellij.ide.util.MemberChooser" timestamp="1625851590899">
+    <state x="642" y="134" key="#com.intellij.ide.util.MemberChooser" timestamp="1625915939876">
       <screen x="0" y="0" width="1676" height="902" />
     </state>
-    <state x="642" y="134" key="#com.intellij.ide.util.MemberChooser/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1625836368404" />
-    <state x="642" y="134" key="#com.intellij.ide.util.MemberChooser/0.0.1676.902@0.0.1676.902" timestamp="1625851590899" />
+    <state x="642" y="134" key="#com.intellij.ide.util.MemberChooser/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1625902587505" />
+    <state x="642" y="134" key="#com.intellij.ide.util.MemberChooser/0.0.1676.902@0.0.1676.902" timestamp="1625915939876" />
     <state x="567" y="226" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1625814623210">
       <screen x="0" y="0" width="1676" height="902" />
     </state>
@@ -329,25 +349,25 @@
     </state>
     <state x="291" y="184" key="FileChooserDialogImpl/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1625892765220" />
     <state x="617" y="205" key="FileChooserDialogImpl/0.0.1676.902@0.0.1676.902" timestamp="1625802655243" />
-    <state width="1632" height="236" key="GridCell.Tab.0.bottom" timestamp="1625889888580">
+    <state width="1632" height="236" key="GridCell.Tab.0.bottom" timestamp="1625902251810">
       <screen x="0" y="0" width="1676" height="902" />
     </state>
-    <state width="1632" height="236" key="GridCell.Tab.0.bottom/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1625889888580" />
+    <state width="1632" height="236" key="GridCell.Tab.0.bottom/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1625902251810" />
     <state width="1632" height="236" key="GridCell.Tab.0.bottom/0.0.1676.902@0.0.1676.902" timestamp="1625883042232" />
-    <state width="1632" height="236" key="GridCell.Tab.0.center" timestamp="1625889888580">
+    <state width="1632" height="236" key="GridCell.Tab.0.center" timestamp="1625902251810">
       <screen x="0" y="0" width="1676" height="902" />
     </state>
-    <state width="1632" height="236" key="GridCell.Tab.0.center/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1625889888580" />
+    <state width="1632" height="236" key="GridCell.Tab.0.center/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1625902251810" />
     <state width="1632" height="236" key="GridCell.Tab.0.center/0.0.1676.902@0.0.1676.902" timestamp="1625883042232" />
-    <state width="1632" height="236" key="GridCell.Tab.0.left" timestamp="1625889888580">
+    <state width="1632" height="236" key="GridCell.Tab.0.left" timestamp="1625902251809">
       <screen x="0" y="0" width="1676" height="902" />
     </state>
-    <state width="1632" height="236" key="GridCell.Tab.0.left/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1625889888580" />
+    <state width="1632" height="236" key="GridCell.Tab.0.left/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1625902251809" />
     <state width="1632" height="236" key="GridCell.Tab.0.left/0.0.1676.902@0.0.1676.902" timestamp="1625883042231" />
-    <state width="1632" height="236" key="GridCell.Tab.0.right" timestamp="1625889888580">
+    <state width="1632" height="236" key="GridCell.Tab.0.right" timestamp="1625902251810">
       <screen x="0" y="0" width="1676" height="902" />
     </state>
-    <state width="1632" height="236" key="GridCell.Tab.0.right/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1625889888580" />
+    <state width="1632" height="236" key="GridCell.Tab.0.right/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1625902251810" />
     <state width="1632" height="236" key="GridCell.Tab.0.right/0.0.1676.902@0.0.1676.902" timestamp="1625883042232" />
     <state width="1632" height="292" key="GridCell.Tab.1.bottom" timestamp="1625889882029">
       <screen x="0" y="0" width="1676" height="902" />
@@ -406,10 +426,10 @@
     </state>
     <state x="317" y="25" key="SettingsEditor/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1625820135157" />
     <state x="317" y="25" key="SettingsEditor/0.0.1676.902@0.0.1676.902" timestamp="1625883028101" />
-    <state x="429" y="183" key="Vcs.Push.Dialog.v2" timestamp="1625883231527">
+    <state x="429" y="183" key="Vcs.Push.Dialog.v2" timestamp="1625896152467">
       <screen x="0" y="0" width="1676" height="902" />
     </state>
-    <state x="429" y="183" key="Vcs.Push.Dialog.v2/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1625820565173" />
+    <state x="429" y="183" key="Vcs.Push.Dialog.v2/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1625896152467" />
     <state x="429" y="183" key="Vcs.Push.Dialog.v2/0.0.1676.902@0.0.1676.902" timestamp="1625883231527" />
     <state x="653" y="363" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1625883163066">
       <screen x="0" y="0" width="1676" height="902" />

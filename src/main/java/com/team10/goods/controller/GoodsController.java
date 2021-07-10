@@ -43,9 +43,18 @@ public class GoodsController {
 		return map;
 	}
 
+	//用户点击收藏商品
 	@CarLog
 	@RequestMapping(value = "/goods/collectGoods", method = RequestMethod.POST)
 	public Object collectGoods() {
+		return null;
+	}
+
+	//根据商品id判断用户是否收藏过该商品
+	@CarLog
+	@NullCheck
+	@RequestMapping("/goods/isCollect")
+	public Object isCollect(String goodsId) {
 		return null;
 	}
 }

@@ -13,5 +13,5 @@ public class UserCollection {
 	private String createTime;
 	private String editTime;
 	private Integer version;
-	private Boolean state;  //0表示用户取消收藏  1表示用户收藏
+	private Boolean state;  //true表示用户收藏  false表示用户取消收藏
 }
