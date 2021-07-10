@@ -28,7 +28,6 @@
   <component name="ChangeListManager">
     <list default="true" id="54ce2935-00e4-4c9b-857a-9f87ffa25028" name="Default Changelist" comment="User">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/aspect/ErrorTokenAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/aspect/ErrorTokenAspect.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +154,7 @@
       <workItem from="1625846683030" duration="2376000" />
       <workItem from="1625891308071" duration="301000" />
       <workItem from="1625914862854" duration="718000" />
-      <workItem from="1625915759591" duration="1973000" />
+      <workItem from="1625915759591" duration="2842000" />
     </task>
     <task id="LOCAL-00001" summary="排序规则更改">
       <created>1625624847791</created>
@@ -213,7 +212,21 @@
       <option name="project" value="LOCAL" />
       <updated>1625916606168</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="TokenCheck注解完善">
+      <created>1625917988313</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1625917988313</updated>
+    </task>
+    <task id="LOCAL-00010" summary="TokenCheck注解完善">
+      <created>1625918012241</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1625918012241</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +262,8 @@
     <MESSAGE value="User" />
     <MESSAGE value="untracked改动文件" />
     <MESSAGE value="UserController大体+token工具类优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="UserController大体+token工具类优化" />
+    <MESSAGE value="TokenCheck注解完善" />
+    <option name="LAST_COMMIT_MESSAGE" value="TokenCheck注解完善" />
   </component>
   <component name="WindowStateProjectService">
     <state x="651" y="274" key="#Notifications" timestamp="1625723971160">
@@ -333,14 +347,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1625726031289" />
-    <state x="189" y="72" key="MergeDialog" timestamp="1625915643240">
+    <state x="189" y="72" key="MergeDialog" timestamp="1625918032935">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="189" y="72" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1625915643240" />
-    <state x="699" y="225" width="926" height="536" key="MultipleFileMergeDialog" timestamp="1625915643245">
+    <state x="189" y="72" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1625918032935" />
+    <state x="699" y="225" width="926" height="536" key="MultipleFileMergeDialog" timestamp="1625918043323">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="699" y="225" width="926" height="536" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1625915643245" />
+    <state x="699" y="225" width="926" height="536" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1625918043323" />
     <state x="1108" y="225" key="RollbackChangesDialog" timestamp="1625833534430">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -362,11 +376,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="529" y="124" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824@0.0.1536.824" timestamp="1625792723664" />
-    <state x="574" y="251" key="git4idea.merge.GitPullDialog" timestamp="1625915556303">
+    <state x="574" y="251" key="git4idea.merge.GitPullDialog" timestamp="1625918021382">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="459" y="199" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1625724038154" />
-    <state x="574" y="251" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1625915556303" />
+    <state x="574" y="251" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1625918021382" />
     <state x="855" y="420" key="git4idea.ui.GitResetDialog" timestamp="1625833422859">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -55,7 +55,7 @@ public class UserController {
     @PostMapping("/user/login")
     @ResponseBody
     public TokenResponse login(@RequestParam String userName, @RequestParam String password, ModelMap modelMap, HttpServletResponse response) {
-        String msg = "操作成功";
+        String msg = "";
         int code = 1000;
         TokenResponse tokenResponse = new TokenResponse();
         try {
@@ -86,6 +86,7 @@ public class UserController {
         tokenResponse.setMsg(msg);
         tokenResponse.setCode(code);
         if (StringUtils.isEmpty(msg)) {
+            msg = "操作成功";
 ////          登录成功
 //            //TODO
 //            response.setHeader("token", TokenUtils.getToken(userName,password));
