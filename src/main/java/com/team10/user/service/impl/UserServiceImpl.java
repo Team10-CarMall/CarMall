@@ -37,4 +37,14 @@ public class UserServiceImpl implements UserService {
 		}
 		return true;
 	}
+
+	@Override
+	public boolean addUser(String username, String password) {
+		return false;
+	}
+
+	@Override
+	public String getUserId(String userName) {
+		return null;
+	}
 }
