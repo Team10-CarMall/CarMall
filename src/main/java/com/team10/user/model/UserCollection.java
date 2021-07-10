@@ -12,5 +12,6 @@ public class UserCollection {
 	private String goodsId;
 	private String createTime;
 	private String editTime;
-	private String version;
+	private Integer version;
+	private Boolean state;  //0表示用户取消收藏  1表示用户收藏
 }
