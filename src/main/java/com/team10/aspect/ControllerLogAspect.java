@@ -1,4 +1,4 @@
-package com.team10.user.log;
+package com.team10.aspect;
 
 import com.team10.user.model.ControllerLog;
 import com.team10.user.service.ControllerLogService;
@@ -25,12 +25,12 @@ public class ControllerLogAspect {
 
     //定义切点 @Pointcut
     //在注解的位置切入代码
-    @Pointcut("@annotation( com.team10.user.log.CarLog)")
-    public void logPoinCut() {
+    @Pointcut("@annotation( com.team10.annotation.CarLog)")
+    public void logPointCut() {
     }
 
     //切面 配置通知
-    @AfterReturning("logPoinCut()")
+    @AfterReturning("logPointCut()")
     public void saveSysLog(JoinPoint joinPoint) {
         System.out.println("切面==========");
         //保存日志

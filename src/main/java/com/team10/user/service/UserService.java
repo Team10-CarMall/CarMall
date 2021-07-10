@@ -11,4 +11,8 @@ import org.springframework.stereotype.Service;
 public interface UserService {
 	//从Redis里面更新用户的收藏记录
 	boolean updateUserCollections(UserCollection uc) throws HandleCacheException;
+
+	boolean addUser(String username, String password);
+
+	String getUserId(String userName);
 }

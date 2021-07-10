@@ -1,4 +1,4 @@
-package com.team10.enums;
+package com.team10.enumdemo;
 
 /**
  * @Author LINZHIPIN
@@ -11,5 +11,7 @@ public class ReturnCode {
 	public static final Integer NO_LOGIN = 888;            //用户未登录
 	public static final Integer WRONG_PASS = 999;          //登录失败，账号或密码错误
 	public static final Integer UNKNOWN_ERROR = 1999;      //未知错误
-	public static final Integer WRONG_DATA = 1020;          //数据处理异常
+
+	public static final Integer NO_ACCOUNT = 2999;         //第一次登录，直接注册
+	public static final Integer ILLEGAL_ACCOUNT = 3999;    //异常用户
 }
