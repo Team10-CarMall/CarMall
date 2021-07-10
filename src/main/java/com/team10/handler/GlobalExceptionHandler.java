@@ -12,7 +12,11 @@ public class GlobalExceptionHandler {
 
 	@ExceptionHandler(value = AccessException.class)
 	public Object doAccessException(Exception e) {
-		System.out.println(e.getMessage());
 		return ReturnDataUtil.getReturnMap(1010, "非法访问", null);
+	}
+
+	@ExceptionHandler(value = Exception.class)
+	public Object doException(Exception e) {
+		return ReturnDataUtil.getReturnMap(1999,"未知错误", null);
 	}
 }

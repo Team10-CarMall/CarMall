@@ -35,6 +35,9 @@ public class ExceptionHandlerAspect {
 		}
 		exceptionLog.setCreateTime(TimeUtil.getSystemTime());
 
+		/*
+		* 需要获取记录用户操作出现异常的日志
+		* */
 		//boolean flag = logService.addExceptionLog(exceptionLog);
 	}
 }

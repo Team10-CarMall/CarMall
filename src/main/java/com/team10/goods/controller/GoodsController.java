@@ -1,6 +1,13 @@
 package com.team10.goods.controller;
 
+import com.team10.annotation.EmptyCheck;
+import com.team10.goods.service.GoodsService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Map;
 
 /**
  * @Author LINZHIPIN
@@ -8,5 +15,30 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class GoodsController {
+	@Autowired
+	private GoodsService goodsService;
 
+	//通过二级分类的id去获取商品列表
+	@RequestMapping(value = "/goods/getGoodsBySubType", method = RequestMethod.GET)
+	@EmptyCheck
+	public Object getGoodsByType(String subTypeId) {
+		Map<String, Object> map = goodsService.getGoodsBySubType(subTypeId);
+		return map;
+	}
+
+	//根据unionId获取相关的商品集合的部分信息
+	@RequestMapping(value = "/goods/getGoodsUnionByUnionId", method = RequestMethod.GET)
+	@EmptyCheck
+	public Object getGoodsUnionByUnionId(String unionId) {
+		Map<String, Object> map = goodsService.getGoodsUnionByUnionId(unionId);
+		return map;
+	}
+
+	//根据商品编号获得商品的详细信息
+	@RequestMapping(value = "/goods/getGoodsDetailById", method = RequestMethod.GET)
+	@EmptyCheck
+	public Object getGoodsDetailById(String goodsId) {
+		Map<String, Object> map = goodsService.getGoodsDetailById(goodsId);
+		return map;
+	}
 }
