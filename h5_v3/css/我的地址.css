@@ -1,0 +1,111 @@
+body{
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;  
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: PingFangSC;
+    color: #333;
+    line-height: 1.5;
+    -webkit-tap-highlight-color: transparent;
+    background-color:#fff;
+    
+}
+a{
+    text-decoration: none;
+}
+.blank{
+    height: 20px;
+    background-color: #fff;
+}
+div{
+    box-sizing: border-box;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.banner{
+    height: 44px;
+    width: 100%;
+    background-color: #FFFFFF;
+    text-align: center;
+    line-height: 44px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #333333;
+    border-bottom: 1px solid #F6F6F6;
+}
+.banner .left-logo{
+    position:absolute;
+    left: 10px;
+    top: 22px;
+    width: 23px;
+    height: 25px;
+    color:#333333;
+}
+.banner .left-logo img{
+    width: 17px;
+    height: 17px;
+}
+.adress_list{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 6px;
+}
+.adress_list li{
+    position: relative;
+    height: 73px;
+}
+.adress_list li img{
+    margin-top: 15px;
+}
+.adress_list li .txt{
+    position: absolute;
+    width: 280px;
+    height: 44px;
+    top: 5px;
+    left: 30px;
+
+}
+.adress_list li p{
+    position: absolute;
+    width: 280px;
+    height: 44px;
+    top: 35px;
+    left: 30px;
+
+}
+.adress_list li p span:nth-child(2){
+    margin-left: 50px;
+}
+.adress_list li em{
+    position: absolute;
+    top: 6px;
+    right: 2px;
+    height: 20px;
+    width: 20px;
+}
+.adress_list li em img{
+    height: 20px;
+    width: 20px;
+}
+.down{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+.btn{
+    display: block;
+    width: 319px;
+    height: 44px;
+    margin-bottom: 15px;
+    background: #FFCC32;
+    border: 0;
+    border-radius: 20px;
+    font-size: 16px;
+    line-height: 44px;
+    color: #333;
+    font-weight: 500;
+}

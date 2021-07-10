@@ -1,0 +1,166 @@
+body{
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;  
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: PingFangSC;
+    color: #333;
+    line-height: 1.5;
+    -webkit-tap-highlight-color: transparent;
+    background-color:#F7F8FC;
+    
+}
+a{
+    text-decoration: none;
+}
+.blank{
+    height: 20px;
+    background-color: #fff;
+}
+div{
+    box-sizing: border-box;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.banner{
+    height: 44px;
+    width: 100%;
+    background-color: #FFFFFF;
+    text-align: center;
+    line-height: 44px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #333333;
+    border-bottom: 1px solid #F6F6F6;
+}
+.banner .left-logo{
+    position:absolute;
+    left: 10px;
+    top: 22px;
+    width: 23px;
+    height: 25px;
+    color:#333333;
+}
+.banner .left-logo img{
+    width: 17px;
+    height: 17px;
+}
+
+.tab_list{
+    display: flex;
+    height: 45px;
+    width: 100%;
+    
+}
+.tab_list li {
+    flex: 1px;
+
+}
+.tab_list  li a {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+    padding: 0 25px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #666666;
+
+}
+.item{
+    display: none;
+}
+.current a{
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 1px solid #ccc;
+}
+.good{
+    display: block;
+    position: relative;
+    height: 174.5px;
+    background-color: #fff;
+    border-top: 1px solid transparent;
+    color: #333333;
+    margin-bottom: 6px;
+}
+.good_hd{
+    position: relative;
+    height: 18px;
+    
+    margin: 10px 12px 10px 10px;
+    font-family: PingFangSC-Medium;
+    font-size: 13px;
+    color: #333333;
+    font-weight: 500;
+
+}
+.good_hd span:nth-child(2){
+    position: absolute;
+    right: 0;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #FF9100;
+}
+.good_bd{
+
+    margin-left: 12px;
+    margin-right: 10px;
+    position: relative;
+}
+.good_detail{
+    display: block;
+    height: 95px;
+}
+.good_bd img{
+    height: 95px;
+    width: 95px;
+}
+.txt{
+    height: 95px;
+    position: absolute;
+    top: 0px;
+    left: 115px;
+}
+.txt p{
+    margin:0;
+}
+.txt_attr{
+    font-family: PingFangSC-Regular;
+font-size: 12px;
+color: #999999;
+}
+.txt_num{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.txt_price{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: PingFang-SC-Bold;
+    font-size: 14px;
+    color: #333333;
+    font-weight: 700;
+}
+.btn{
+    display: block;
+    position: absolute;
+    bottom: 5.5px;
+    right: 10px;
+    width: 77px;
+    height: 24px;
+    border: 1px solid #FF9100;
+    border-radius: 14px;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #FF9100;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 24px;
+}

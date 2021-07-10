@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=none,
+    maximum-scale=1.0,mininum-scale=1.0">
+    <title>我的地址</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/我的订单.css">
+    
+</head>
+<body>
+    <div class="blank"></div>
+    <!-- banner -->
+    <div class="banner">
+        <em class="left-logo" id="back"><img  src="img/向左箭头jd.png" alt=""></em>
+        <script language="javascript"> 
+            var oBack=document.getElementById("back");
+            oBack.onclick=function(){
+                window.history.back(-1); 
+            };
+        </script>
+        <span>门店列表</span>
+    </div>
+    <!-- 订单类型选择 -->
+    <div class="tab">
+        <div>
+            <ul class="tab_list">
+                <li class="current"><a href="#">全部</a></li>
+                <li><a href="#">待付款</a></li>
+                <li><a href="#">待发货</a></li>
+                <li><a href="#">待收货</a></li>
+            </ul>
+        </div>
+        <div class="tab_con">
+            <div class="item" style="display: block;">
+                <!-- 一件商品 -->
+                <div class="good">
+                    <a href="#" class="good_detail">
+                        <div class="good_hd"><span>车品商城</span><span>待付款</span></div>
+                    <div class="good_bd">
+                        <img src="./upload/车载电器.dpg" alt="">
+                        <div class="txt">
+                            <p>360行车记录仪 G300 迷你隐藏 高清夜视 无限车速 黑灰色</p>
+                            <span class="txt_attr">深灰色</span ><span class="txt_num">×1</span><span class="txt_price">￥221</span>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="#" class="btn">立即付款</a>
+                </div>
+                <!-- 一件商品 -->
+                <div class="good">
+                    <a href="#" class="good_detail">
+                        <div class="good_hd"><span>车品商城</span><span>待付款</span></div>
+                    <div class="good_bd">
+                        <img src="./upload/车载电器.dpg" alt="">
+                        <div class="txt">
+                            <p>360行车记录仪 G300 迷你隐藏 高清夜视 无限车速 黑灰色</p>
+                            <span class="txt_attr">深灰色</span ><span class="txt_num">×1</span><span class="txt_price">￥221</span>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="#" class="btn">立即付款</a>
+                </div>
+            </div>
+            <!-- 代付款内容 -->
+            <div class="item">
+                <!-- 一件商品 -->
+                <div class="good">
+                    <a href="#" class="good_detail">
+                        <div class="good_hd"><span>车品商城</span><span>待付款</span></div>
+                    <div class="good_bd">
+                        <img src="./upload/车载电器.dpg" alt="">
+                        <div class="txt">
+                            <p>360行车记录仪 G300 迷你隐藏 高清夜视 无限车速 黑灰色</p>
+                            <span class="txt_attr">深灰色</span ><span class="txt_num">×1</span><span class="txt_price">￥221</span>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="#" class="btn">立即付款</a>
+                </div>
+
+            </div>
+            <!-- 代发货内容 -->
+            <div class="item">
+                
+                <!-- 一件商品 -->
+                <div class="good">
+                    <a href="#" class="good_detail">
+                        <div class="good_hd"><span>车品商城</span><span>待发货</span></div>
+                    <div class="good_bd">
+                        <img src="./upload/车载电器.dpg" alt="">
+                        <div class="txt">
+                            <p>360行车记录仪 G300 迷你隐藏 高清夜视 无限车速 黑灰色</p>
+                            <span class="txt_attr">深灰色</span ><span class="txt_num">×1</span><span class="txt_price">￥221</span>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="#" class="btn">提醒发货</a>
+                </div>
+
+            </div>
+            <!-- 代收货内容 -->
+            <div class="item">
+                
+                <!-- 一件商品 -->
+                <div class="good">
+                    <a href="#" class="good_detail">
+                        <div class="good_hd"><span>车品商城</span><span>待收货</span></div>
+                    <div class="good_bd">
+                        <img src="./upload/车载电器.dpg" alt="">
+                        <div class="txt">
+                            <p>360行车记录仪 G300 迷你隐藏 高清夜视 无限车速 黑灰色</p>
+                            <span class="txt_attr">深灰色</span ><span class="txt_num">×1</span><span class="txt_price">￥221</span>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="#" class="btn">确认收货</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        // 获取元素
+        var tab_list=document.querySelector('.tab_list');
+        var lis =tab_list.querySelectorAll('li');
+        var items=document.querySelectorAll('.item');
+        // for循环绑定点击事件
+        for(var i=0;i<lis.length;i++){
+            // 给五个li设置索引号
+            lis[i].setAttribute('index',i);
+            lis[i].onclick=function(){
+                // 其余的li清除class
+                for(var j=0;j<lis.length;j++){
+                    lis[j].className="";
+                }
+                this.className='current';
+                // 显示内容
+                var index=this.getAttribute('index');
+                for(var i=0;i<items.length;i++){
+                    items[i].style.display='none';
+                }
+                items[index].style.display='block';
+            }
+        }
+    </script>
+</body>
+</html>

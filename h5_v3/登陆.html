@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=none,
+    maximum-scale=1.0,mininum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/登陆.css">
+    <title>登陆</title>
+</head>
+
+</script>
+<body>
+    <div class="blank"></div>
+    <!-- banner -->
+    <div class="banner">
+        <em class="left-logo" id="back"><img  src="img/向左箭头jd.png" alt=""></em>
+        <script language="javascript"> 
+            var oBack=document.getElementById("back");
+            oBack.onclick=function(){
+                window.history.back(-1); 
+            };
+        </script>
+        <span>登陆</span>
+    </div>
+
+    <div class="login">登陆车品商城</div>
+
+    <form class="login_from" action="">
+        <div class="input">
+            用户名<input type="text" placeholder="请输入您的用户名"><br>
+        </div>
+        <div class="input">
+            密 &nbsp;&nbsp;码<input type="password" placeholder="请输入您的密码" id="pwd"><br>
+            <!-- <img src="./img/Eyes.png" alt="" id="eyesHide">
+            <img src="./img/Eyes-closed.png" alt="" id="eyesShow"> -->
+        </div>
+        <center><button type="button" class="btn" id="btn">确认</button></center>
+        <script>
+            var oBtn=document.getElementById("btn");
+            oBtn.onclick=function(){
+                window.location.href="index.html";
+            }
+        </script>
+    </form>
+
+    <center><p class="no-uer">未注册用户会自动注册并登录</p></center>
+</body>
+</html>
