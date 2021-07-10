@@ -1,10 +1,11 @@
 package com.team10.util;
 
 import io.jsonwebtoken.*;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
-import java.security.Key;
+import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
-import java.util.UUID;
 
 public class TokenUtils {
     //过期时间（一天）
@@ -29,7 +30,9 @@ public class TokenUtils {
         return jwtToken;
     }
 
-    public static Boolean checkToken(String token) {
+    public static Boolean checkToken() {
+        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+        String token = request.getHeader("token");
         if (token == null) {
             return false;
         }
@@ -49,5 +52,11 @@ public class TokenUtils {
         Jws<Claims> claimsJws = jwtParser.setSigningKey(signature).parseClaimsJws(token);
         Claims claims = claimsJws.getBody();
         return (String) claims.get(target);
+    }
+
+    public static String getUserId() {
+        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+        String token = request.getHeader("token");
+        return getClaim(token,"id");
     }
 }

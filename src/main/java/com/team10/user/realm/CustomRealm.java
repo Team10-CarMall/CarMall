@@ -43,11 +43,14 @@ public class CustomRealm extends AuthorizingRealm {
 
         User user=userMapper.selectByUsername(userName);
         if (user==null){
-            throw new UnknownAccountException("用户名不存在!");
+            throw new UnknownAccountException("用户名不存在，前往注册");
         }
 
         if (!user.getPassword().equals(password)){
             throw new IncorrectCredentialsException("用户名密码不匹配!");
+        }
+        if (user.getState().equals("0")){
+            throw new DisabledAccountException("账号异常!");
         }
 
         SimpleAuthenticationInfo info=new SimpleAuthenticationInfo(user.getUsername(),password,getName());
