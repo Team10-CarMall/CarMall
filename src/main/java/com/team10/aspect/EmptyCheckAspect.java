@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class EmptyCheckAspect {
 
-	@Pointcut(value = "@annotation(com.team10.annotation.EmptyCheck)")
+	@Pointcut(value = "@annotation(com.team10.annotation.NullCheck)")
 	public void pointCut() {
 
 	}
