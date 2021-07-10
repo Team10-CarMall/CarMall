@@ -1,4 +1,4 @@
-package com.team10.user.log;
+package com.team10.annotation;
 
 import java.lang.annotation.*;
 

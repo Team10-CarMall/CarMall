@@ -27,15 +27,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54ce2935-00e4-4c9b-857a-9f87ffa25028" name="Default Changelist" comment="User">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/enumdemo/ReturnCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/enumdemo/ReturnCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/user/log/CarLog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/user/log/ControllerLogAspect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/user/realm/CustomRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/user/realm/CustomRealm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/user/service/ControllerLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/user/service/ControllerLogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/util/TokenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/util/TokenUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/user/log/CarLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/annotation/CarLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/user/log/ControllerLogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/aspect/ControllerLogAspect.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +155,7 @@
       <workItem from="1625846683030" duration="2376000" />
       <workItem from="1625891308071" duration="301000" />
       <workItem from="1625914862854" duration="718000" />
-      <workItem from="1625915759591" duration="348000" />
+      <workItem from="1625915759591" duration="649000" />
     </task>
     <task id="LOCAL-00001" summary="排序规则更改">
       <created>1625624847791</created>
@@ -206,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625915548415</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="UserController大体+token工具类优化">
+      <created>1625916348896</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1625916348896</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +241,8 @@
     <MESSAGE value="字段修正" />
     <MESSAGE value="User" />
     <MESSAGE value="untracked改动文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="untracked改动文件" />
+    <MESSAGE value="UserController大体+token工具类优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="UserController大体+token工具类优化" />
   </component>
   <component name="WindowStateProjectService">
     <state x="651" y="274" key="#Notifications" timestamp="1625723971160">
