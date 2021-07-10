@@ -27,8 +27,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54ce2935-00e4-4c9b-857a-9f87ffa25028" name="Default Changelist" comment="User">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/user/log/CarLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/annotation/CarLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/user/log/ControllerLogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/aspect/ControllerLogAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/aspect/ErrorTokenAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/aspect/ErrorTokenAspect.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +155,7 @@
       <workItem from="1625846683030" duration="2376000" />
       <workItem from="1625891308071" duration="301000" />
       <workItem from="1625914862854" duration="718000" />
-      <workItem from="1625915759591" duration="649000" />
+      <workItem from="1625915759591" duration="1973000" />
     </task>
     <task id="LOCAL-00001" summary="排序规则更改">
       <created>1625624847791</created>
@@ -206,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625916348896</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="UserController大体+token工具类优化">
+      <created>1625916606168</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1625916606168</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,11 +349,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="183" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1625813314115" />
-    <state x="451" y="183" key="Vcs.Push.Dialog.v2" timestamp="1625848249416">
+    <state x="451" y="183" key="Vcs.Push.Dialog.v2" timestamp="1625916620764">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1625795338608" />
-    <state x="451" y="183" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1625848249416" />
+    <state x="451" y="183" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1625916620764" />
     <state x="1030" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1625915321042">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
