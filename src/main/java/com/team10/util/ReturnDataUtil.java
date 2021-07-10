@@ -1,7 +1,6 @@
 package com.team10.util;
 
-import com.team10.enumdemo.ReturnCode;
-import org.springframework.ui.Model;
+import com.team10.enums.ReturnCode;
 
 import java.util.HashMap;
 import java.util.Map;

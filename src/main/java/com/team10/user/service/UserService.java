@@ -1,11 +1,18 @@
 package com.team10.user.service;
 
+import com.team10.exception.HandleCacheException;
+import com.team10.user.model.UserCollection;
+import org.springframework.stereotype.Service;
+
 /**
  * @Author LINZHIPIN
  * @CreateTime 2021/07/07/00007 1:00:23
  */
 public interface UserService {
-    boolean addUser(String username, String password);
+	//从Redis里面更新用户的收藏记录
+	boolean updateUserCollections(UserCollection uc) throws HandleCacheException;
 
-    String getUserId(String userName);
+	boolean addUser(String username, String password);
+
+	String getUserId(String userName);
 }

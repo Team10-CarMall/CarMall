@@ -1,8 +1,8 @@
 package com.team10.goods.controller;
 
+import com.team10.annotation.CarLog;
 import com.team10.annotation.NullCheck;
 import com.team10.goods.service.GoodsService;
-import com.team10.user.log.CarLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -44,8 +44,17 @@ public class GoodsController {
 	}
 
 	@CarLog
+	//用户点击收藏商品
 	@RequestMapping(value = "/goods/collectGoods", method = RequestMethod.POST)
 	public Object collectGoods() {
+		return null;
+	}
+
+	//根据商品id判断用户是否收藏过该商品
+	@CarLog
+	@NullCheck
+	@RequestMapping("/goods/isCollect")
+	public Object isCollect(String goodsId) {
 		return null;
 	}
 }

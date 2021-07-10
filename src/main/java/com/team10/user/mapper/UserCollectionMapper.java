@@ -1,5 +1,6 @@
 package com.team10.user.mapper;
 
+import com.team10.user.model.UserCollection;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -9,4 +10,12 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface UserCollectionMapper {
 
+	//查询是否有该条记录
+	UserCollection selectOne(UserCollection uc);
+
+	//插入一条新记录
+	int insertOne(UserCollection uc);
+
+	//更新记录
+	int updateOne(UserCollection uc);
 }

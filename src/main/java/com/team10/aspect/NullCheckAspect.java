@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  */
 @Aspect
 @Component
-public class EmptyCheckAspect {
+public class NullCheckAspect {
 
 	@Pointcut(value = "@annotation(com.team10.annotation.NullCheck)")
 	public void pointCut() {
@@ -21,7 +21,7 @@ public class EmptyCheckAspect {
 	}
 
 	@Before("pointCut()")
-	public void emptyCheck(JoinPoint joinPoint) throws AccessException {
+	public void nullCheck(JoinPoint joinPoint) throws AccessException {
 		Object[] args = joinPoint.getArgs();
 		for(Object o : args) {
 			if(o == null) {

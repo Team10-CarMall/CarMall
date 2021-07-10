@@ -1,4 +1,4 @@
-package com.team10.enumdemo;
+package com.team10.enums;
 
 /**
  * @Author LINZHIPIN
