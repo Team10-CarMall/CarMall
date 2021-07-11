@@ -51,8 +51,8 @@ public class GoodsController {
 
 	//根据商品id和用户id来收藏商品，用户id从后端拿
 	@RequestMapping(value = "/goods/collectGoods", method = RequestMethod.POST)
-	//@CarLog
-	//@TokenCheck
+	@CarLog
+	@TokenCheck
 	@NullCheck
 	public Object collectGoods(String goodsId) throws HandleCacheException {
 		Map<String, Object> map = userService.collectGoods(goodsId);
