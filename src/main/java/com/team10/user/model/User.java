@@ -4,8 +4,6 @@ import lombok.Data;
 
 @Data
 public class User {
-    private Integer id;
-
     private String userId;
 
     private String username;
@@ -23,5 +21,11 @@ public class User {
     private Short version;
 
     private String state;
+
+    public User(String userId,String username,String password) {
+        this.userId = userId;
+        this.username = username;
+        this.password = password;
+    }
 
 }

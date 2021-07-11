@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<script src="jquery-3.5.1.js"></script>
+<script type="text/javascript">
+    $(function()
+    {
+        $("#uploadBtn").click(function()
+        {
+            var fileObj = $("#fileUpload")[0];
+            console.dir(fileObj)
+            console.dir($("#fileForm")[0])
+            var formData = new FormData();
+            formData.append("pos", 1);
+            formData.append("files", $("#fileUpload1").files);
+            $.ajax({
+                //url : "/a/goods/uploadGoodsPics",
+                url : "/ateeaas",
+                data : formData,
+                dataType : "json",
+                processData : false,
+                contentType : false,
+                type : "post",
+                success : function(resp)
+                {
+                    alert(resp);
+                }
+            })
+        })
+    })
+</script>
+<body>
+	<form id="fileForm">
+		<input type="file" name="file" id="fileUpload1" multiple="multiple"/>
+	</form>
+	<input type="button" value="上传文件" id="uploadBtn"/>
+
+	<p>添加商品信息</p>
+	<form>
+		<table>
+			<tr>
+				<td></td>
+				<td>
+
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

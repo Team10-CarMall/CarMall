@@ -1,8 +1,9 @@
 package com.team10.user.service.impl;
 
-import com.google.gson.JsonParser;
 import com.team10.exception.HandleCacheException;
 import com.team10.user.mapper.UserCollectionMapper;
+import com.team10.user.mapper.UserMapper;
+import com.team10.user.model.User;
 import com.team10.user.model.UserCollection;
 import com.team10.user.service.UserService;
 import com.team10.util.ReturnDataUtil;
@@ -28,6 +29,8 @@ public class UserServiceImpl implements UserService {
 	private UserCollectionMapper userCollectionMapper;
 	@Resource(name="redisTemplateOfJson")
 	private RedisTemplate<String, Object> redisTemplate;
+	@Autowired
+	private UserMapper userMapper;
 
 	//将redis中的数据持久化到MySql中
 	@Override
@@ -39,7 +42,6 @@ public class UserServiceImpl implements UserService {
 	)
 	public boolean updateUserCollections(UserCollection uc) throws HandleCacheException {
 		int count = 0;
-		//先去mysql里面查，如果存在执行修改操作，否则执行插入操作
 		if(userCollectionMapper.selectOne(uc) == null) {
 			count = userCollectionMapper.insertOne(uc);
 		} else {
@@ -49,6 +51,19 @@ public class UserServiceImpl implements UserService {
 			throw new HandleCacheException("处理用户 ["+uc.getUserId()+"] 数据时异常");
 		}
 		return true;
+	}
+
+	@Override
+	public boolean addUser(String username, String password) {
+		String getId = userMapper.selectLastUserId();
+		int num = Integer.parseInt(getId.substring(4)) + 1;
+		String userId = "user" + num;
+		return userMapper.insertSelective(new User(userId,username,password)) > 0 ? true : false;
+	}
+
+	@Override
+	public User getUser(String userName) {
+		return userMapper.selectByUsername(userName);
 	}
 
 	//用户点击收藏商品
@@ -130,15 +145,5 @@ public class UserServiceImpl implements UserService {
 		u1.setUserId("user10000");
 		UserCollection u2 = userCollectionMapper.selectOne(u1);
 		return ReturnDataUtil.getReturnMap(u2 == null ? false : u2.getState());
-	}
-
-	@Override
-	public boolean addUser(String username, String password) {
-		return false;
-	}
-
-	@Override
-	public String getUserId(String userName) {
-		return null;
 	}
 }

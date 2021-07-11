@@ -1,0 +1,184 @@
+Index: src/main/java/com/team10/user/service/UserService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.team10.user.service;\r\n\r\nimport org.springframework.stereotype.Service;\r\n\r\n/**\r\n * @Author LINZHIPIN\r\n * @CreateTime 2021/07/07/00007 1:00:23\r\n */\r\npublic interface UserService {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/com/team10/user/service/UserService.java	(revision 0765eab4d593de86103cae4bd343432d2602ac51)
++++ src/main/java/com/team10/user/service/UserService.java	(date 1625831961152)
+@@ -6,5 +6,9 @@
+  * @Author LINZHIPIN
+  * @CreateTime 2021/07/07/00007 1:00:23
+  */
++
+ public interface UserService {
++
++    void insertUser() {
++    }
+ }
+Index: src/main/java/com/team10/user/controller/UserController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.team10.user.controller;\r\n\r\nimport com.alibaba.druid.util.StringUtils;\r\nimport com.team10.user.log.CarLog;\r\nimport com.team10.user.service.ControllerLogService;\r\nimport org.apache.shiro.SecurityUtils;\r\nimport org.apache.shiro.authc.DisabledAccountException;\r\nimport org.apache.shiro.authc.IncorrectCredentialsException;\r\nimport org.apache.shiro.authc.UnknownAccountException;\r\nimport org.apache.shiro.authc.UsernamePasswordToken;\r\nimport org.apache.shiro.crypto.hash.Md5Hash;\r\nimport org.springframework.core.env.Environment;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.stereotype.Controller;\r\nimport org.springframework.ui.ModelMap;\r\nimport org.springframework.web.bind.annotation.PostMapping;\r\nimport org.springframework.web.bind.annotation.RequestMapping;\r\nimport org.springframework.web.bind.annotation.RequestParam;\r\nimport org.springframework.web.bind.annotation.ResponseBody;\r\n\r\n/**\r\n * @Author LINZHIPIN\r\n * @CreateTime 2021/07/07/00007 0:58:42\r\n */\r\n@Controller\r\npublic class UserController {\r\n    @Autowired\r\n    private Environment env;\r\n    @Autowired\r\n    private ControllerLogService controllerLogService;\r\n\r\n    @CarLog\r\n    @RequestMapping(\"/test\")\r\n    @ResponseBody\r\n    public String test() {\r\n        return \"abc\";\r\n    }\r\n\r\n    //跳到登录页\r\n    @CarLog\r\n    @RequestMapping(value = {\"/to/login\", \"/unauth\"})\r\n    public String toLogin() {\r\n        return \"login\";\r\n    }\r\n\r\n    //登录认证\r\n    @CarLog\r\n    @PostMapping(\"/login\")\r\n    public String login(@RequestParam String userName, @RequestParam String password, ModelMap modelMap) {\r\n        String errorMsg = \"\";\r\n        try {\r\n            if (!SecurityUtils.getSubject().isAuthenticated()) {\r\n                String newPsd = new Md5Hash(password, env.getProperty(\"shiro.encrypt.password.salt\")).toString();\r\n                UsernamePasswordToken token = new UsernamePasswordToken(userName, newPsd);\r\n                SecurityUtils.getSubject().login(token);\r\n            }\r\n        } catch (UnknownAccountException e) {\r\n            //此处用户名不存在转入注册界面\r\n            errorMsg = e.getMessage();\r\n            modelMap.addAttribute(\"userName\", userName);\r\n            return \"registry\";\r\n        } catch (DisabledAccountException e) {\r\n            errorMsg = e.getMessage();\r\n            modelMap.addAttribute(\"userName\", userName);\r\n        } catch (IncorrectCredentialsException e) {\r\n            errorMsg = e.getMessage();\r\n            modelMap.addAttribute(\"userName\", userName);\r\n        } catch (Exception e) {\r\n            errorMsg = \"用户登录异常，请联系管理员!\";\r\n            e.printStackTrace();\r\n        }\r\n        if (StringUtils.isEmpty(errorMsg)) {\r\n            return \"redirect:/index\";\r\n        } else {\r\n            modelMap.addAttribute(\"errorMsg\", errorMsg);\r\n            return \"login\";\r\n        }\r\n    }\r\n\r\n    //退出登录\r\n    @CarLog\r\n    @RequestMapping(value = \"/logout\")\r\n    public String logout() {\r\n        SecurityUtils.getSubject().logout();\r\n        return \"login\";\r\n    }\r\n\r\n    @CarLog\r\n    @PostMapping(\"/registry\")\r\n    public String registry(@RequestParam String username,@RequestParam String password) {\r\n        return null;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/com/team10/user/controller/UserController.java	(revision 0765eab4d593de86103cae4bd343432d2602ac51)
++++ src/main/java/com/team10/user/controller/UserController.java	(date 1625831961158)
+@@ -3,6 +3,8 @@
+ import com.alibaba.druid.util.StringUtils;
+ import com.team10.user.log.CarLog;
+ import com.team10.user.service.ControllerLogService;
++import com.team10.user.service.UserService;
++import com.team10.util.TokenUtils;
+ import org.apache.shiro.SecurityUtils;
+ import org.apache.shiro.authc.DisabledAccountException;
+ import org.apache.shiro.authc.IncorrectCredentialsException;
+@@ -13,10 +15,9 @@
+ import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.stereotype.Controller;
+ import org.springframework.ui.ModelMap;
+-import org.springframework.web.bind.annotation.PostMapping;
+-import org.springframework.web.bind.annotation.RequestMapping;
+-import org.springframework.web.bind.annotation.RequestParam;
+-import org.springframework.web.bind.annotation.ResponseBody;
++import org.springframework.web.bind.annotation.*;
++
++import javax.servlet.http.HttpServletResponse;
+ 
+ /**
+  * @Author LINZHIPIN
+@@ -28,34 +29,34 @@
+     private Environment env;
+     @Autowired
+     private ControllerLogService controllerLogService;
++    @Autowired
++    private UserService userService;
+ 
+     @CarLog
+-    @RequestMapping("/test")
+-    @ResponseBody
+-    public String test() {
+-        return "abc";
++    @RequestMapping("/index")
++    public String index() {
++        return "user/index";
+     }
+ 
+     //跳到登录页
+     @CarLog
+     @RequestMapping(value = {"/to/login", "/unauth"})
+     public String toLogin() {
+-        return "login";
++        return "user/login";
+     }
+ 
+     //登录认证
+     @CarLog
+-    @PostMapping("/login")
+-    public String login(@RequestParam String userName, @RequestParam String password, ModelMap modelMap) {
++    @RequestMapping(value = "/user/login", method = RequestMethod.POST)
++    public String login(@RequestParam String userName, @RequestParam String password, ModelMap modelMap, HttpServletResponse response) {
+         String errorMsg = "";
+         try {
+             if (!SecurityUtils.getSubject().isAuthenticated()) {
+-                String newPsd = new Md5Hash(password, env.getProperty("shiro.encrypt.password.salt")).toString();
+-                UsernamePasswordToken token = new UsernamePasswordToken(userName, newPsd);
++                UsernamePasswordToken token = new UsernamePasswordToken(userName, password);
+                 SecurityUtils.getSubject().login(token);
+             }
+         } catch (UnknownAccountException e) {
+-            //此处用户名不存在转入注册界面
++            //此处用户名不存在,直接注册
+             errorMsg = e.getMessage();
+             modelMap.addAttribute("userName", userName);
+             return "registry";
+@@ -70,6 +71,9 @@
+             e.printStackTrace();
+         }
+         if (StringUtils.isEmpty(errorMsg)) {
++            //登录成功
++            //TODO
++            response.setHeader("token",TokenUtils.getToken(userName,password));
+             return "redirect:/index";
+         } else {
+             modelMap.addAttribute("errorMsg", errorMsg);
+@@ -82,12 +86,13 @@
+     @RequestMapping(value = "/logout")
+     public String logout() {
+         SecurityUtils.getSubject().logout();
+-        return "login";
++        return "redirect:/index";
+     }
+ 
+     @CarLog
+-    @PostMapping("/registry")
++    @PostMapping("/user/register")
+     public String registry(@RequestParam String username,@RequestParam String password) {
++        userService.insertUser();
+         return null;
+     }
+ }
+Index: GeneratorMapper.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<!DOCTYPE generatorConfiguration\r\n        PUBLIC \"-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN\"\r\n        \"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd\">\r\n<generatorConfiguration>\r\n    <!-- 指定连接数据库的 JDBC 驱动包所在位置，指定到你本机的完整路径 -->\r\n    <classPathEntry\r\n            location=\"E:\\迅雷下载\\mysql-connector-java-5.1.49\\mysql-connector-java-5.1.49\\mysql-connector-java-5.1.49.jar\"/>\r\n    <!-- 配置 table 表信息内容体，targetRuntime 指定采用 MyBatis3 的版本 -->\r\n    <context id=\"tables\" targetRuntime=\"MyBatis3\">\r\n        <!-- 抑制生成注释，由于生成的注释都是英文的，可以不让它生成 -->\r\n        <commentGenerator>\r\n            <property name=\"suppressAllComments\" value=\"true\" />\r\n        </commentGenerator>\r\n        <!-- 配置数据库连接信息 -->\r\n        <jdbcConnection driverClass=\"com.mysql.jdbc.Driver\"\r\n\r\n                        connectionURL=\"jdbc:mysql://localhost:3306/car\"\r\n                        userId=\"root\"\r\n                        password=\"908706ly\">\r\n        </jdbcConnection>\r\n        <!-- 生成 model 类，targetPackage 指定 model 类的包名， targetProject 指定\r\n       生成的 model 放在 eclipse 的哪个工程下面-->\r\n        <javaModelGenerator targetPackage=\"com.team10.user.model\"\r\n                            targetProject=\"C:\\maven\\team10\\CarMall\\src\\main\\java\">\r\n            <property name=\"enableSubPackages\" value=\"false\" />\r\n            <property name=\"trimStrings\" value=\"false\" />\r\n        </javaModelGenerator>\r\n        <!-- 生成 MyBatis 的 Mapper.xml 文件，targetPackage 指定 mapper.xml 文件的\r\n       包名， targetProject 指定生成的 mapper.xml 放在 eclipse 的哪个工程下面 -->\r\n        <sqlMapGenerator targetPackage=\"com.team10.user.mapper\"\r\n                         targetProject=\"src/main/java\">\r\n            <property name=\"enableSubPackages\" value=\"false\" />\r\n        </sqlMapGenerator>\r\n        <!-- 生成 MyBatis 的 Mapper 接口类文件,targetPackage 指定 Mapper 接口类的包\r\n       名， targetProject 指定生成的 Mapper 接口放在 eclipse 的哪个工程下面 -->\r\n        <javaClientGenerator type=\"XMLMAPPER\"\r\n                             targetPackage=\"com.team10.user.mapper\"\r\n                             targetProject=\"src/main/java\">\r\n            <property name=\"enableSubPackages\" value=\"false\" />\r\n        </javaClientGenerator>\r\n        <!-- 数据库表名及对应的 Java 模型类名 -->\r\n        <table tableName=\"t_log_controller\" domainObjectName=\"ControllerLog\"\r\n               enableCountByExample=\"false\"\r\n               enableUpdateByExample=\"false\"\r\n               enableDeleteByExample=\"false\"\r\n        enableSelectByExample=\"false\"\r\n        selectByExampleQueryId=\"false\"/>\r\n    </context>\r\n</generatorConfiguration>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- GeneratorMapper.xml	(revision 0765eab4d593de86103cae4bd343432d2602ac51)
++++ GeneratorMapper.xml	(date 1625794448665)
+@@ -5,7 +5,7 @@
+ <generatorConfiguration>
+     <!-- 指定连接数据库的 JDBC 驱动包所在位置，指定到你本机的完整路径 -->
+     <classPathEntry
+-            location="E:\迅雷下载\mysql-connector-java-5.1.49\mysql-connector-java-5.1.49\mysql-connector-java-5.1.49.jar"/>
++            location="C:\Users\admin\Documents\Tencent Files\1728068490\FileRecv\Tushu\out\artifacts\Tushu_war_exploded\WEB-INF\classes\WEB-INF\lib\mysql-connector-java-5.1.7-bin.jar"/>
+     <!-- 配置 table 表信息内容体，targetRuntime 指定采用 MyBatis3 的版本 -->
+     <context id="tables" targetRuntime="MyBatis3">
+         <!-- 抑制生成注释，由于生成的注释都是英文的，可以不让它生成 -->
+@@ -15,14 +15,14 @@
+         <!-- 配置数据库连接信息 -->
+         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+ 
+-                        connectionURL="jdbc:mysql://localhost:3306/car"
++                        connectionURL="jdbc:mysql://42.192.222.31:3306/car"
+                         userId="root"
+-                        password="908706ly">
++                        password="cpjlymysql">
+         </jdbcConnection>
+         <!-- 生成 model 类，targetPackage 指定 model 类的包名， targetProject 指定
+        生成的 model 放在 eclipse 的哪个工程下面-->
+         <javaModelGenerator targetPackage="com.team10.user.model"
+-                            targetProject="C:\maven\team10\CarMall\src\main\java">
++                            targetProject="D:\mavenPro\CarMall\src\main\java">
+             <property name="enableSubPackages" value="false" />
+             <property name="trimStrings" value="false" />
+         </javaModelGenerator>
+@@ -41,10 +41,22 @@
+         </javaClientGenerator>
+         <!-- 数据库表名及对应的 Java 模型类名 -->
+         <table tableName="t_log_controller" domainObjectName="ControllerLog"
++               enableCountByExample="false"
++               enableUpdateByExample="false"
++               enableDeleteByExample="false"
++        enableSelectByExample="false"
++        selectByExampleQueryId="false"/>
++        <table tableName="t_user" domainObjectName="User"
++               enableCountByExample="false"
++               enableUpdateByExample="false"
++               enableDeleteByExample="false"
++               enableSelectByExample="false"
++               selectByExampleQueryId="false"/>
++        <table tableName="t_address" domainObjectName="Address"
+                enableCountByExample="false"
+                enableUpdateByExample="false"
+                enableDeleteByExample="false"
+-        enableSelectByExample="false"
+-        selectByExampleQueryId="false"/>
++               enableSelectByExample="false"
++               selectByExampleQueryId="false"/>
+     </context>
+ </generatorConfiguration>
+\ No newline at end of file
