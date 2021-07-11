@@ -22,18 +22,18 @@ public class GoodsServiceImpl implements GoodsService {
 	@Override
 	public Map<String, Object> getGoodsBySubType(String subTypeId) {
 		List<Goods> list = goodsMapper.getGoodsBySubType(subTypeId);
-		return ReturnDataUtil.getReturnMap("操作成功", list);
+		return ReturnDataUtil.getReturnMap(list);
 	}
 
 	@Override
 	public Map<String, Object> getGoodsUnionByUnionId(String unionId) {
 		List<Goods> list = goodsMapper.getGoodsDetailByUnionId(unionId);
-		return ReturnDataUtil.getReturnMap("操作成功",list);
+		return ReturnDataUtil.getReturnMap(list);
 	}
 
 	@Override
 	public Map<String, Object> getGoodsDetailById(String goodsId) {
 		Goods goods = goodsMapper.getGoodsDetailById(goodsId);
-		return ReturnDataUtil.getReturnMap("操作成功", goods);
+		return ReturnDataUtil.getReturnMap(goods);
 	}
 }

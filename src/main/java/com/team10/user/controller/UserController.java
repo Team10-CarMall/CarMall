@@ -1,7 +1,7 @@
 package com.team10.user.controller;
 
 import com.alibaba.druid.util.StringUtils;
-import com.team10.enumdemo.ReturnCode;
+import com.team10.enums.ReturnCode;
 import com.team10.annotation.CarLog;
 import com.team10.user.dto.AddrDto;
 import com.team10.user.response.*;
@@ -33,7 +33,7 @@ public class UserController {
     private Environment env;
     @Autowired
     private UserService userService;
-    @Autowired
+    //@Autowired
     private AddressService addressService;
 
     @CarLog

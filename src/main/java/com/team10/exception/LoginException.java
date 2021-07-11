@@ -1,6 +1,7 @@
 package com.team10.exception;
 
 /**
+ * 登录异常
  * @Author LINZHIPIN
  * @CreateTime 2021/07/07/00007 3:45:04
  */

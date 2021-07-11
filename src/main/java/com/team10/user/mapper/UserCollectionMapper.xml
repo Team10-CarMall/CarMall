@@ -3,5 +3,52 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.team10.user.mapper.UserCollectionMapper">
+    <select id="selectOne" parameterType="com.team10.user.model.UserCollection" resultType="com.team10.user.model.UserCollection">
+        select
+            uc.goods_id,
+            uc.user_id,
+            uc.create_time,
+            uc.edit_time,
+            uc.version,
+            uc.state
+        from
+            t_user_collection uc
+        where
+            uc.user_id = #{userId}
+        and
+            uc.goods_id = #{goodsId}
+    </select>
 
+    <insert id="insertOne" parameterType="com.team10.user.model.UserCollection">
+        <!--
+            应该判断一下是否传入的是空
+        -->
+        insert into t_user_collection (
+            user_id,
+            goods_id,
+            create_time,
+            state
+        ) values (
+            #{userId},
+            #{goodsId},
+            #{createTime},
+            #{state}
+        )
+    </insert>
+
+    <update id="updateOne" parameterType="com.team10.user.model.UserCollection">
+        <!--
+            应该判断一下是否传入的是空
+         -->
+        update
+            t_user_collection
+        set
+            edit_time = #{editTime},
+            state = #{state},
+            version = version + 1
+        where
+            user_id = #{userId}
+        and
+            goods_id = #{goodsId},
+    </update>
 </mapper>

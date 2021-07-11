@@ -36,18 +36,52 @@
 	<form id="fileForm">
 		<input type="file" name="file" id="fileUpload1" multiple="multiple"/>
 	</form>
-	<input type="button" value="上传文件" id="uploadBtn"/>
+	<input id="uploadBtn" type="button" value="上传文件" />
 
-	<p>添加商品信息</p>
-	<form>
-		<table>
-			<tr>
-				<td></td>
-				<td>
 
-				</td>
-			</tr>
-		</table>
-	</form>
+	<script type="text/javascript">
+		$(function () {
+		    //isCollect();
+		    $("#collectGoods").click(function () {
+			    collectGoods();
+            })
+        })
+		function isCollect() {
+		    var jsonData = {
+		        "goodsId" : "goods10001"
+		    }
+			$.ajax({
+				url : "/goods/collectGoods",
+                data : jsonData,
+                dataType : "json",
+				type : "get",
+				/*headers : {
+                    "token" : ""
+				},*/
+				success : function (resp) {
+					alert("判断有无收藏" +resp.code + "   ||   " + resp.data);
+                }
+			})
+        }
+        function collectGoods() {
+            var jsonData = {
+                "goodsId" : "goods10002"
+            }
+            $.ajax({
+                url : "/goods/collectGoods",
+                data : jsonData,
+                dataType : "json",
+                type : "post",
+                /*headers : {
+					"token" : ""
+				},*/
+                success : function (resp) {
+                    alert("用户点击收藏后的结果" + resp.code + "   ||   " + resp.data);
+                }
+            })
+        }
+	</script>
+	<p>查看收藏</p>
+	<input id="collectGoods" type="button" value="收藏商品" />
 </body>
 </html>
