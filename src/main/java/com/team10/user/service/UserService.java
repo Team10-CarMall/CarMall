@@ -1,6 +1,7 @@
 package com.team10.user.service;
 
 import com.team10.exception.HandleCacheException;
+import com.team10.user.model.User;
 import com.team10.user.model.UserCollection;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +18,7 @@ public interface UserService {
 
 	boolean addUser(String username, String password);
 
-	String getUserId(String userName);
+	User getUser(String userName);
 
 	//根据商品id和用户id来收藏商品，用户id从后端拿
 	Map<String, Object> collectGoods(String goodsId) throws HandleCacheException;
