@@ -44,6 +44,18 @@ public class TokenUtils {
         return true;
     }
 
+    public static Boolean checkToken(String token) {
+        if (token == null) {
+            return false;
+        }
+        try {
+            Jws<Claims> claimsJws = Jwts.parser().setSigningKey(signature).parseClaimsJws(token);
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
+    }
+
     public static String getClaim(String token,String target) {
         if (token == null) {
             return "visitor";
@@ -57,6 +69,10 @@ public class TokenUtils {
     public static String getUserId() {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         String token = request.getHeader("token");
-        return getClaim(token,"id");
+        return getClaim(token,"userId");
     }
+    public static String getUserId(String token) {
+        return getClaim(token,"userId");
+    }
+
 }

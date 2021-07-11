@@ -12,11 +12,24 @@ public class Address {
 
     private String addr;
 
-    private Integer userId;
+    private String userId;
 
     private String state;
 
     private String createTime;
 
 
+    public Address(String name, String phone, String addr,String userId) {
+        this.name = name;
+        this.phone = phone;
+        this.addr = addr;
+        this.userId = userId;
+    }
+
+    public Address(int id,String name, String phone, String addr) {
+        this.id = id;
+        this.name = name;
+        this.phone = phone;
+        this.addr = addr;
+    }
 }

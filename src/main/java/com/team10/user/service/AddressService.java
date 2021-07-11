@@ -1,23 +1,16 @@
 package com.team10.user.service;
 
 import com.team10.user.dto.AddrDto;
+import com.team10.user.model.Address;
 
 import java.util.List;
 
-public class AddressService {
-    public List<AddrDto> getAddrs(String userId) {
-        return null;
-    }
+public interface AddressService {
+    List<AddrDto> getAddrs(String userId);
 
-    public boolean addAddr(String name, String phone, String addr, String userId) {
-        return false;
-    }
+    boolean addAddr(Address address);
 
-    public boolean updateAddr(String name, String phone, String addr, String userId) {
-        return false;
-    }
+    boolean updateAddr(Address address);
 
-    public AddrDto getAddr(String userId) {
-        return null;
-    }
+    AddrDto getAddr(int id);
 }

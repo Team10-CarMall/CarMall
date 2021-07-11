@@ -1,6 +1,6 @@
 package com.team10.user.dto;
 
-import com.team10.enumdemo.OrderState;
+import com.team10.enums.OrderState;
 import lombok.Data;
 
 import java.io.Serializable;

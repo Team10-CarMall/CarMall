@@ -54,7 +54,7 @@ public class CustomRealm extends AuthorizingRealm {
         }
 
         SimpleAuthenticationInfo info=new SimpleAuthenticationInfo(user.getUsername(),password,getName());
-        setSession("uid",user.getId());
+        setSession("uid",user.getUserId());
         return info;
     }
 

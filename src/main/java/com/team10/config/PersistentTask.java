@@ -36,7 +36,7 @@ public class PersistentTask {
 	*     key为coll_goodsId
 	*     value为json格式的UserCollection，有,userId、createTime、editTime、state
 	* */
-	@Scheduled(cron = "0 0 24 * * ?")
+	@Scheduled(cron = "0 0 0 * * ?")
 	public void saveCollectionGoods() throws HandleCacheException {
 		Set<String> keys = redisTemplate.keys("coll_*");
 		SetOperations<String, Object> ops = redisTemplate.opsForSet();

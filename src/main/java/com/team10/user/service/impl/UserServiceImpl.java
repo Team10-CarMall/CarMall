@@ -2,6 +2,8 @@ package com.team10.user.service.impl;
 
 import com.team10.exception.HandleCacheException;
 import com.team10.user.mapper.UserCollectionMapper;
+import com.team10.user.mapper.UserMapper;
+import com.team10.user.model.User;
 import com.team10.user.model.UserCollection;
 import com.team10.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,8 @@ import org.springframework.transaction.annotation.Transactional;
 public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserCollectionMapper userCollectionMapper;
+	@Autowired
+	private UserMapper userMapper;
 
 	//将redis中的数据持久化到MySql中
 	@Override
@@ -40,11 +44,15 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public boolean addUser(String username, String password) {
-		return false;
+		String getId = userMapper.selectLastUserId();
+		int num = Integer.parseInt(getId.substring(4)) + 1;
+		String userId = "user" + num;
+		return userMapper.insertSelective(new User(userId,username,password)) > 0 ? true : false;
 	}
 
 	@Override
-	public String getUserId(String userName) {
-		return null;
+	public User getUser(String userName) {
+		return userMapper.selectByUsername(userName);
 	}
+
 }
