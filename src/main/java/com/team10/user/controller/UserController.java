@@ -29,7 +29,7 @@ import java.util.List;
  * @Author LINZHIPIN
  * @CreateTime 2021/07/07/00007 0:58:42
  */
-@Controller
+@RestController
 public class UserController {
     @Autowired
     private Environment env;
@@ -56,7 +56,6 @@ public class UserController {
     //登录认证
     @CarLog
     @PostMapping("/user/login")
-    @ResponseBody
     public TokenResponse login(String username,String password, ModelMap modelMap, HttpServletResponse response) {
         String msg = "";
         int code = 1000;
@@ -96,7 +95,6 @@ public class UserController {
     @CarLog
     @PostMapping(value = "/user/logout")
     @TokenCheck
-    @ResponseBody
     //TODO
     public NoTokenResponse logout() {
         NoTokenResponse response = new NoTokenResponse();
@@ -115,7 +113,6 @@ public class UserController {
     //用户注册
     @CarLog
     @PostMapping("/user/register")
-    @ResponseBody
     public TokenResponse registry(String username, String password) {
         TokenResponse response = new TokenResponse();
         String msg = "操作失败";
@@ -134,7 +131,6 @@ public class UserController {
     @CarLog
     @GetMapping("/user/userReceiveAddrs")
     @TokenCheck
-    @ResponseBody
     public AddrResponse userReceiveAddrs() {
         AddrResponse response = new AddrResponse();
         //TODO
@@ -155,7 +151,6 @@ public class UserController {
     @CarLog
     @GetMapping("/user/userOrderList")
     @TokenCheck
-    @ResponseBody
     public OrderResponse userOrderList() {
         OrderResponse response = new OrderResponse();
         //TODO
@@ -172,12 +167,13 @@ public class UserController {
     @CarLog
     @PostMapping("/user/addUserReceiveAddrs")
     @TokenCheck
-    @ResponseBody
-    public NoTokenResponse addAddrs(String name,String phone,String addr) {
+    public NoTokenResponse addAddrs(String name,String phone,
+                                    String addr) {
         NoTokenResponse response = new NoTokenResponse();
         String msg = "操作失败";
         int code = ReturnCode.UNKNOWN_ERROR;
-        if(addressService.addAddr(new Address(name, phone, addr, TokenUtils.getUserId()))){
+        if(addressService.addAddr(new Address(name, phone, addr,
+                TokenUtils.getUserId()))){
             msg = "操作成功";
             code = ReturnCode.SUCCESS;
         }
@@ -190,7 +186,6 @@ public class UserController {
     @CarLog
     @PostMapping("/user/updateUserReceiveAddr")
     @TokenCheck
-    @ResponseBody
     public NoTokenResponse updateAddr(int id,String name,String phone,String addr) {
         NoTokenResponse response = new NoTokenResponse();
         String msg = "操作失败";
@@ -208,7 +203,6 @@ public class UserController {
     @CarLog
     @PostMapping("/user/getUserReceiveAddr")
     @TokenCheck
-    @ResponseBody
     public SingleReceiveResponse getAddr(int id) {
         SingleReceiveResponse response = new SingleReceiveResponse();
         //TODO

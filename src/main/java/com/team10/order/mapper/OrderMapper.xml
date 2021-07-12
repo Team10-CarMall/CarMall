@@ -1,7 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.team10.order.mapper.OrderMapper">
+
+
+  <insert id="insertSelective" parameterType="com.team10.order.model.Order">
+    insert into t_order
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="num != null">
+        num,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+      <if test="expressFee != null">
+        express_fee,
+      </if>
+      <if test="goodsId != null">
+        goods_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="addressId != null">
+        address_id,
+      </if>
+      <if test="state != null">
+        state,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="editTime != null">
+        edit_time,
+      </if>
+      <if test="version != null">
+        version,
+      </if>
+      <if test="totalPrice != null">
+        total_price,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="num != null">
+        #{num,jdbcType=CHAR},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="expressFee != null">
+        #{expressFee,jdbcType=DECIMAL},
+      </if>
+      <if test="goodsId != null">
+        #{goodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=CHAR},
+      </if>
+      <if test="addressId != null">
+        #{addressId,jdbcType=INTEGER},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=CHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=CHAR},
+      </if>
+      <if test="editTime != null">
+        #{editTime,jdbcType=CHAR},
+      </if>
+      <if test="version != null">
+        #{version,jdbcType=SMALLINT},
+      </if>
+      <if test="totalPrice != null">
+        #{totalPrice,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+
+
+  <insert id="insert" parameterType="com.team10.order.model.Order">
+    insert into t_order (id,  num, price,
+      express_fee, goods_id, user_id, 
+      address_id, state, create_time, 
+      edit_time, version, total_price
+      )
+    values (#{id,jdbcType=INTEGER}, #{num,jdbcType=CHAR}, #{price,jdbcType=DECIMAL},
+      #{expressFee,jdbcType=DECIMAL}, #{goodsId,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, 
+      #{addressId,jdbcType=INTEGER}, #{state,jdbcType=CHAR}, #{createTime,jdbcType=CHAR}, 
+      #{editTime,jdbcType=CHAR}, #{version,jdbcType=SMALLINT}, #{totalPrice,jdbcType=DECIMAL}
+      )
+  </insert>
+
+
+
+
+  <select id="selectByUserId" parameterType="java.lang.String" resultType="com.team10.order.response.EzOrderResponse">
+    select
+        o.id,
+        o.num,
+        o.price,
+        o.total_price,
+        g.goods_description,
+        g.pic_url1 goodsPicUrl,
+        o.state,
+        g.color
+    from t_order o,t_goods g
+		where o.user_id = #{userId} and g.user_id = #{userId}
+  </select>
+
+
+  <select id="selectOrderById" parameterType="java.lang.Integer" resultType="com.team10.order.response.HdOrderResponse">
+    select
+        o.id,
+        o.num,
+        o.price,
+        o.total_price,
+		o.express_fee,
+        g.goods_description,
+        g.pic_url1 goodsPicUrl,
+        o.state,
+        g.color,
+		o.create_time,
+		o.edit_time payTime,
+		a.name,
+		a.phone,
+		a.addr
+    from t_order o,t_goods g,t_address a
+		where o.id = #{id,jdbcType=INTEGER} and g.goods_id = o.goods_id and
+		a.id = o.address_id
+  </select>
 
 </mapper>

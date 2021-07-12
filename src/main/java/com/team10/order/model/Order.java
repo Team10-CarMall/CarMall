@@ -1,31 +1,28 @@
 package com.team10.order.model;
 
+import lombok.Data;
+
 /**
  * @Author LINZHIPIN
  * @CreateTime 2021/07/07/00007 0:44:47
  */
 
+@Data
 public class Order {
-	private String orderId;      //订单编号 三位随机数+时间
+	private Integer id;      //订单编号 三位随机数+时间
 	private String num;          //购买的数量
 	private Double price;        //单价
 	private String expressFee;   //快递费
 	private Double totalPrice;   //总价
 	private String goodsId;      //商品id: goods+10000 递增
 	private String userId;       //用户id: user+10000 递增
-	private String addressId;    //快递地址id 主键自增
+	private int addressId;    //快递地址id 主键自增
 	private String state;        // 0未付款，1已付款，2表示未发货，3表示已发货，4表示已完成
 	private String createTime;
 	private String editTime;
 	private Integer version;
 
-	public String getOrderId() {
-		return orderId;
-	}
 
-	public void setOrderId(String orderId) {
-		this.orderId = orderId;
-	}
 
 	public String getNum() {
 		return num;
@@ -75,11 +72,11 @@ public class Order {
 		this.userId = userId;
 	}
 
-	public String getAddressId() {
+	public int getAddressId() {
 		return addressId;
 	}
 
-	public void setAddressId(String addressId) {
+	public void setAddressId(int addressId) {
 		this.addressId = addressId;
 	}
 
@@ -113,5 +110,13 @@ public class Order {
 
 	public void setVersion(Integer version) {
 		this.version = version;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 }

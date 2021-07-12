@@ -31,4 +31,5 @@ public class ReturnDataUtil {
 	public static Map<String, Object> getReturnMap(String msg, Object data) {
 		return getReturnMap(ReturnCode.SUCCESS, msg, data);
 	}
+
 }
