@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title></title>
+    <script>
+        window.onload=function(){
+            var oBtn=document.getElementById("btn");
+            oBtn.onclick=function(){
+                var oList=document.getElementById("list");
+                var oTxt=document.getElementById("txt");
+                var textNode=document.createTextNode(oTxt.value);
+                var oLi=document.createElement("li");
+                oLi.appendChild(textNode);
+                oList.appendChild(oLi);
+            };
+
+        }
+    </script>
+</head>
+<script src="jquery-3.5.1.js"></script>
+<body>
+    <ul id="list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <input id="txt" type="text"/>
+    <input id="btn" type="button" value="插入">
+</body>
+</html>

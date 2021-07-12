@@ -36,13 +36,14 @@ public class DicServiceImpl implements DicService {
 		*/
 		ValueOperations<String, Object> ops = redisTemplate.opsForValue();
 		List<DicType> list = null;
-		if(!redisTemplate.hasKey("dic_goodsType")) {
+		String redisKey = "dic_goodsType";
+		if(!redisTemplate.hasKey(redisKey)) {
 			list = dicTypeMapper.getGoodsType(enable);
-			ops.set("dic_goodsType", list);;
+			ops.set(redisKey, list);;
 		} else {
-			list = (List<DicType>) ops.get("dic_goodsType");
+			list = (List<DicType>) ops.get(redisKey);
 		}
-		return ReturnDataUtil.getReturnMap("操作成功", list);
+		return ReturnDataUtil.getReturnMap(list);
 	}
 
 	@Override
@@ -56,15 +57,16 @@ public class DicServiceImpl implements DicService {
 
 		ValueOperations<String, Object> ops = redisTemplate.opsForValue();
 		List<DicSubType> list = null;
-		if(!redisTemplate.hasKey("dic_goodsSubType_" + id)){
+		String redisKey = "dic_SubType_" + id;
+		if(!redisTemplate.hasKey(redisKey)){
 			DicSubType dicSubType = new DicSubType();
 			dicSubType.setParentId(Integer.valueOf(id));
 			dicSubType.setEnable(true);
 			list = dicSubTypeMapper.getGoodsSubType(dicSubType);
-			ops.set("dic_goodsSubType_" + id, list);
+			ops.set(redisKey, list);
 		} else {
-			list = (List<DicSubType>) ops.get("dic_goodsSubType_" + id);
+			list = (List<DicSubType>) ops.get(redisKey);
 		}
-		return ReturnDataUtil.getReturnMap("操作成功",list);
+		return ReturnDataUtil.getReturnMap(list);
 	}
 }
