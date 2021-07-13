@@ -1,12 +1,19 @@
 package com.team10.order.mapper;
 
+import com.team10.order.model.Order;
+import com.team10.order.response.EzOrderResponse;
+import com.team10.order.response.HdOrderResponse;
 import org.apache.ibatis.annotations.Mapper;
 
-/**
- * @Author LINZHIPIN
- * @CreateTime 2021/07/07/00007 2:25:33
- */
+import java.util.List;
+
 @Mapper
 public interface OrderMapper {
+    HdOrderResponse selectOrderById(Integer id);
+
+    int insertSelective(Order record);
+
+
+    List<EzOrderResponse> selectByUserId(String userId);
 
 }

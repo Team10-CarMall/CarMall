@@ -30,4 +30,5 @@ public class ReturnDataUtil {
 	public static Map<String, Object> getReturnMap(Object data) {
 		return getReturnMap(ReturnCode.SUCCESS, "操作成功", data);
 	}
+
 }
