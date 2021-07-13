@@ -12,7 +12,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="CarMall" target="1.8" />
+      <module name="CarMall" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

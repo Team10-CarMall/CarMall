@@ -4,6 +4,7 @@ import com.team10.exception.HandleCacheException;
 import com.team10.user.mapper.UserCollectionMapper;
 import com.team10.user.model.UserCollection;
 import com.team10.user.service.UserService;
+import com.team10.util.ReflectUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -13,8 +14,10 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -39,7 +42,7 @@ public class PersistentTask {
 	 */
 	@Scheduled(cron = "0 0 3 * * ?")
 	//@Scheduled(fixedRate = 3000)
-	public void saveCollectionGoods() throws HandleCacheException {
+	public void saveCollectionGoods() throws HandleCacheException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
 		String keyPattern = "coll_*";
 		Set<String> keys = redisTemplate.keys(keyPattern);
 		SetOperations<String, Object> ops = redisTemplate.opsForSet();
@@ -48,10 +51,8 @@ public class PersistentTask {
 			Set<Object> members = ops.members(key);
 			for(Object o  : members) {
 				//这里还需要日志记录
-				if(!(o instanceof UserCollection)) {
-					throw new HandleCacheException("redis中存储的数据在转化过程中出现异常!");
-				}
-				UserCollection uc = (UserCollection) o;
+				Map<String, Object> map = (Map<String, Object>) o;
+				UserCollection uc = (UserCollection) ReflectUtil.setValuesFromMap(UserCollection.class, map);
 				//业务处理中如果存在异常就会抛出，因此这里不用判断操作成功或者操作失败
 				userService.updateUserCollections(uc);
 			}

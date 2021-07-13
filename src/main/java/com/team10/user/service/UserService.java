@@ -5,6 +5,7 @@ import com.team10.user.model.User;
 import com.team10.user.model.UserCollection;
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
 /**
@@ -21,12 +22,12 @@ public interface UserService {
 	User getUser(String userName);
 
 	//根据商品id和用户id来收藏商品，用户id从后端拿
-	Map<String, Object> collectGoods(String goodsId) throws HandleCacheException;
+	Map<String, Object> collectGoods(String goodsId) throws HandleCacheException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException;
 
 	/**
 	 * 返回一个boolean true表示有收藏，false表示没有收藏
 	 * @param goodsId 商品的id
 	 * @return flag
 	 */
-	Map<String, Object> isCollect(String goodsId) throws HandleCacheException;
+	Map<String, Object> isCollect(String goodsId) throws HandleCacheException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException;
 }

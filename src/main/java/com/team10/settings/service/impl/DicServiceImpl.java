@@ -29,6 +29,7 @@ public class DicServiceImpl implements DicService {
 	private DicTypeMapper dicTypeMapper;
 	@Autowired
 	private DicSubTypeMapper dicSubTypeMapper;
+
 	@Override
 	public Map<String, Object> getGoodsType(Boolean enable) {
 		/*

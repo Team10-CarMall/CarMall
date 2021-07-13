@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
 /**
@@ -51,10 +52,10 @@ public class GoodsController {
 
 	//根据商品id和用户id来收藏商品，用户id从后端拿
 	@RequestMapping(value = "/goods/collectGoods", method = RequestMethod.POST)
-	@CarLog
-	@TokenCheck
+	//@CarLog
+	//@TokenCheck
 	@NullCheck
-	public Object collectGoods(String goodsId) throws HandleCacheException {
+	public Object collectGoods(String goodsId) throws HandleCacheException, NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException {
 		Map<String, Object> map = userService.collectGoods(goodsId);
 		return map;
 	}
@@ -62,9 +63,9 @@ public class GoodsController {
 	//根据商品id判断用户是否收藏过该商品
 	@RequestMapping(value = "/goods/isCollect", method = RequestMethod.GET)
 	//@CarLog
-	@NullCheck
 	//@TokenCheck
-	public Object isCollect(String goodsId) throws HandleCacheException {
+	@NullCheck
+	public Object isCollect(String goodsId) throws HandleCacheException, NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException {
 		Map<String, Object> map = userService.isCollect(goodsId);
 		return map;
 	}

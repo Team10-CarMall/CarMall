@@ -12,7 +12,14 @@ import java.util.Map;
  */
 public interface DicService {
 
-
+	/**
+	 * @param enable : 查询的是是否启用的一级分类
+	 * @return id,
+	 *         text,
+	 *         value,
+	 *         order,
+	 *         picUrl
+	 */
 	Map<String, Object> getGoodsType(Boolean enable);
 
 	Map<String, Object> getGoodsSubType(String id) throws AccessException;

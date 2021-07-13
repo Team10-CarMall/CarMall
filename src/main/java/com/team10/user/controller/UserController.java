@@ -42,8 +42,13 @@ public class UserController {
     }
 
 
+    @RequestMapping("/")
+    public String index1() {
+        return "index";
+    }
+
     //跳到登录页
-    @CarLog
+    //@CarLog
     @RequestMapping(value = {"/login", "/unauth"})
     public String toLogin() {
         return "/user/login";
