@@ -5,6 +5,7 @@
 2.开发框架：springboot 2.5.2
 
 3.其他： mysql 8.0
+ 
         redis 6.2
         maven 3.6
         druid 1.1
