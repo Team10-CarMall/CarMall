@@ -25,10 +25,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
-/**
- * @Author LINZHIPIN
- * @CreateTime 2021/07/07/00007 0:58:42
- */
 @RestController
 public class UserController {
     @Autowired

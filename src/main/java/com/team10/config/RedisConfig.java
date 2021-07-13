@@ -15,14 +15,13 @@ import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 @Configuration
 public class RedisConfig {
 
-	//创建一个以json形式存储数据的redisTemplate
+	//创建一个以json格式作为序列化的template
 	@Bean("redisTemplateOfJson")
 	public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
 		RedisTemplate<String, Object> template = new RedisTemplate<>();
 		template.setConnectionFactory(redisConnectionFactory);
 		Jackson2JsonRedisSerializer<Object> jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer<>(Object.class);
 		template.setDefaultSerializer(jackson2JsonRedisSerializer);
-		//template.setValueSerializer(jackson2JsonRedisSerializer);
 		return template;
 	}
 }

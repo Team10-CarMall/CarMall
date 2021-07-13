@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 用于返回数据给前端时的工具类
  * @Author LINZHIPIN
  * @CreateTime 2021/07/07/00007 3:52:51
  */

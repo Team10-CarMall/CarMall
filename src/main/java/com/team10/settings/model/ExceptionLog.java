@@ -1,6 +1,7 @@
 package com.team10.settings.model;
 
 /**
+ * 异常日志对象
  * @Author LINZHIPIN
  * @CreateTime 2021/07/09/00009 15:14:46
  */

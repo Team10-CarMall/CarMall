@@ -1,6 +1,7 @@
 package com.team10.settings.model;
 
 /**
+ * 一级分类的对象
  * @Author LINZHIPIN
  * @CreateTime 2021/07/07/00007 1:01:36
  */

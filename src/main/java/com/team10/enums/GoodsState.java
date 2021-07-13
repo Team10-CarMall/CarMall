@@ -1,6 +1,7 @@
 package com.team10.enums;
 
 /**
+ * 商品的状态
  * @Author LINZHIPIN
  * @CreateTime 2021/07/07/00007 1:54:43
  */

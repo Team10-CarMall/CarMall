@@ -3,6 +3,9 @@ package com.team10.util;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+/**
+ * 用MD5对数据进行加密
+ */
 public class MD5Util {
 	
 	public static String getMD5(String password) {

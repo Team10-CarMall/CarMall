@@ -1,6 +1,7 @@
 package com.team10.enums;
 
 /**
+ * 用户账号的状态，这里没有使用
  * @Author LINZHIPIN
  * @CreateTime 2021/07/07/00007 2:34:37
  */

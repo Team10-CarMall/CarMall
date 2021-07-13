@@ -7,6 +7,11 @@ import org.springframework.stereotype.Component;
 
 import javax.servlet.ServletContext;
 
+/**
+ * 实现了ApplicationContextAware接口,可以用于处理有关ApplicationContext的相关操作
+ * 这里主要用于通过name、class、获取Bean
+ *          以及获取applicationContext对象进行其他操作
+ */
 @Component
 public class SpringUtil implements ApplicationContextAware
 {

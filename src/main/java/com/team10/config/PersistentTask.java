@@ -34,11 +34,11 @@ public class PersistentTask {
 	@Autowired
 	private UserService userService;
 
-	/*
+	/**
 	 *   设置在每天凌晨3点进行持久化，将redis中用户收藏的商品数据进行持久化
 	 *   redis中的结构设计如下:
-	 *     key为coll_goodsId
-	 *     value为json格式的UserCollection，有,userId、createTime、editTime、state
+	 *     key为 coll_ + goodsId
+	 *     value为json格式的UserCollection对象
 	 */
 	@Scheduled(cron = "0 0 3 * * ?")
 	//@Scheduled(fixedRate = 3000)
@@ -52,12 +52,14 @@ public class PersistentTask {
 			for(Object o  : members) {
 				//这里还需要日志记录
 				Map<String, Object> map = (Map<String, Object>) o;
+				//通过自定义的简单反射工具类，将LinkedListMap中值映射到UserCollection对象中
 				UserCollection uc = (UserCollection) ReflectUtil.setValuesFromMap(UserCollection.class, map);
 				//业务处理中如果存在异常就会抛出，因此这里不用判断操作成功或者操作失败
 				userService.updateUserCollections(uc);
 			}
+			//处理完成后删除key
+			redisTemplate.delete(key);
 		}
-		//处理完成后删除keys
-		redisTemplate.delete(keys);
+
 	}
 }

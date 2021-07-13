@@ -1,6 +1,7 @@
 package com.team10.enums;
 
 /**
+ * 返回值的状态
  * @Author LINZHIPIN
  * @CreateTime 2021/07/07/00007 3:38:22
  */

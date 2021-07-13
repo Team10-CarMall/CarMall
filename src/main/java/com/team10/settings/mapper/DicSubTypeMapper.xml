@@ -9,8 +9,7 @@
             d.text,
             d.value,
             d.order,
-            d.parent_id,
-            d.enable
+            d.parent_id
         from
             t_dic_sub_type d
         where

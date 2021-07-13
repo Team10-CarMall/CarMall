@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * 用于页面的跳转
+ * 用于页面的跳转(作废)
  * @Author LINZHIPIN
  * @CreateTime 2021/07/13/00013 16:23:20
  */

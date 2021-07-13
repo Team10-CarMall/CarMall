@@ -1,6 +1,7 @@
 package com.team10.goods.model;
 
 /**
+ * 商品对象
  * @Author LINZHIPIN
  * @CreateTime 2021/07/06 22:41:01
  */

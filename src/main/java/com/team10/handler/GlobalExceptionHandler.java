@@ -18,16 +18,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ResponseBody
 public class GlobalExceptionHandler {
 
+	//处理访问异常
 	@ExceptionHandler(value = AccessException.class)
 	public Object doAccessException(Exception e) {
 		return ReturnDataUtil.getReturnMap(ReturnCode.ILLEGAL_ACCESS, "非法访问", null);
 	}
 
+	//处理缓存数据的异常
 	@ExceptionHandler(value = HandleCacheException.class)
 	public Object HandleCacheException(Exception e) {
 		return ReturnDataUtil.getReturnMap(ReturnCode.DATA_ERROR, "数据异常", null);
 	}
 
+	//处理其他的异常
 	@ExceptionHandler(value = Exception.class)
 	public Object doException(Exception e) {
 		return ReturnDataUtil.getReturnMap(ReturnCode.UNKNOWN_ERROR,"未知错误", null);

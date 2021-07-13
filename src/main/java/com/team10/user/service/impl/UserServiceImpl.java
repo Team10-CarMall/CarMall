@@ -35,7 +35,7 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserMapper userMapper;
 
-	//将redis中的数据持久化到MySql中
+	//将redis中的数据持久化到MySql中，使用transactional进行事务操作
 	@Override
 	@Transactional(
 			rollbackFor = {
@@ -69,7 +69,7 @@ public class UserServiceImpl implements UserService {
 		return userMapper.selectByUsername(userName);
 	}
 
-	//用户点击收藏商品
+	//处理用户点击收藏商品时的业务
 	@Override
 	public Map<String, Object> collectGoods(String goodsId) throws HandleCacheException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
 		SetOperations<String, Object> ops = redisTemplate.opsForSet();
@@ -80,6 +80,7 @@ public class UserServiceImpl implements UserService {
 			Set<Object> members = ops.members(redisKey);
 			for (Object o : members) {
 				Map<String, Object> map = (Map<String, Object>) o;
+				//通过反射工具类将map的数据映射到UserCollection的实例对象中
 				UserCollection uc = (UserCollection) ReflectUtil.setValuesFromMap(UserCollection.class, map);
 				if ("user10000".equals(uc.getUserId())) {
 					return ReturnDataUtil.getReturnMap(uc.getState());
@@ -122,34 +123,34 @@ public class UserServiceImpl implements UserService {
 		return ReturnDataUtil.getReturnMap(null);
 	}
 
-	//判断用户是否有收藏商品
+	//在进入商品详情页后，判断用户是否有收藏商品
 	@Override
 	public Map<String, Object> isCollect(String goodsId) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
 		SetOperations<String, Object> ops = redisTemplate.opsForSet();
 		String redisKey = "coll_" + goodsId;
 		//如果redis中存在key就进行查找
 		if (redisTemplate.hasKey(redisKey)) {
+			//取出该key中的所有member
 			Set<Object> members =  ops.members(redisKey);
 			for (Object o : members) {
 				Map<String, Object> map = (Map<String, Object>) o;
 				UserCollection uc = (UserCollection) ReflectUtil.setValuesFromMap(UserCollection.class, map);
-				if ("user10000".equals(uc.getUserId())) {
+				//找到符合当前登录用户的数据
+				if (TokenUtils.getUserId().equals(uc.getUserId())) {
 					return ReturnDataUtil.getReturnMap(uc.getState());
 				}
-				/*if (TokenUtils.getUserId().equals(uc.getUserId())) {
-					return ReturnDataUtil.getReturnMap(uc.getState());
-				}*/
 			}
 		}
 			//运行到这里说明要么redis中不存在该key,或者存在key但是不存在value，都需要去mysql中查找
 			UserCollection u1 = new UserCollection();
 			u1.setGoodsId(goodsId);
-			//u1.setUserId(TokenUtils.getUserId())
-			u1.setUserId("user10000");
+			u1.setUserId(TokenUtils.getUserId());
 			UserCollection u2 = userCollectionMapper.selectOne(u1);
+			//如果mysql中查到了数据，就加到redis中。到这里如果mysql中没有，表示用户没有收藏过，返回false
 			if (u2 != null) {
 				ops.add(redisKey, u2);
 			}
+			//这里只是进行查询用户的收藏状态操作，因此返回收藏记录的state给前端即可
 			return ReturnDataUtil.getReturnMap(u2 == null ? false : u2.getState());
 	}
 }

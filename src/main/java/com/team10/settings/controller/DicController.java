@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 
 /**
+ * 主要用于映射关于数据字典的请求
  * @Author LINZHIPIN
  * @CreateTime 2021/07/07 3:29:53
  */
