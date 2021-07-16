@@ -47,3 +47,9 @@
 >>>settings  
 >>>user  
 >>>util  
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---车品商城前端部分---
+===
+静态页面由前端同学完成的<br>
+由于技术问题，页面完成以后，整合在后端的项目中，
+ajax请求由后端同学完成，目前也只完成了部分ajax请求<br>
