@@ -22,7 +22,7 @@
 
         <script type="text/javascript">
             $(function () {
-                loadIndex();
+                //loadIndex();
             })
             //加载index页的主要内容
             function loadIndex() {
@@ -41,6 +41,7 @@
                         if(resp.code === 1000) {
                             $.each(resp.data, function (index, element) {
                                 html += '<li>';
+                                //这里有问题
                                 html += '<a href="/leimujuhe?id='+element.id+'">';
                                 //html += '<span class="nav-select-icon-icon1"></span>';
                                 html += '<img src="'+element.picUrl+'"/>';
@@ -65,51 +66,51 @@
     <!-- 导航栏 -->
     <div class="nav">
         <ul class="nav-select" id="goodsTypes">
-<!--            <li>-->
-<!--                <a href="/leimujuhe">-->
-<!--                     <span class="nav-select-icon-icon1"></span>-->
-<!--                     <span class="nav-select-font">车载电器</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="leimujuhe.html">-->
-<!--                    <span class="nav-select-icon-icon2"></span>-->
-<!--                    <span class="nav-select-font">车行辅助</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="leimujuhe.html">-->
-<!--                    <span class="nav-select-icon-icon3"></span>-->
-<!--                    <span class="nav-select-font">汽车装饰</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="leimujuhe.html">-->
-<!--                    <span class="nav-select-icon-icon4"></span>-->
-<!--                    <span class="nav-select-font">行车安全</span>-->
-<!--                </a>-->
-<!--            </li>-->
+            <li>
+                <a href="/leimujuhe">
+                     <span class="nav-select-icon-icon1"></span>
+                     <span class="nav-select-font">车载电器</span>
+                </a>
+            </li>
+            <li>
+                <a href="/leimujuhe">
+                    <span class="nav-select-icon-icon2"></span>
+                    <span class="nav-select-font">车行辅助</span>
+                </a>
+            </li>
+            <li>
+                <a href="/leimujuhe">
+                    <span class="nav-select-icon-icon3"></span>
+                    <span class="nav-select-font">汽车装饰</span>
+                </a>
+            </li>
+            <li>
+                <a href="/leimujuhe">
+                    <span class="nav-select-icon-icon4"></span>
+                    <span class="nav-select-font">行车安全</span>
+                </a>
+            </li>
         </ul>
-<!--        <ul class="nav-select">-->
-<!--            <li>-->
-<!--                <a href="#">-->
-<!--                    <span class="nav-select-icon-icon5"></span>-->
-<!--                    <span class="nav-select-font">工具/其他</span>-->
-<!--                </a>-->
-<!--            </li>-->
-<!--           <li><a href="leimujuhe.html">-->
-<!--            <span class="nav-select-icon-icon6"></span>-->
-<!--            <span class="nav-select-font">维修养护</span>-->
-<!--               </a></li>-->
-<!--               <li><a href="leimujuhe.html">-->
-<!--                <span class="nav-select-icon-icon7"></span>-->
-<!--                <span class="nav-select-font">美容清洗</span>-->
-<!--           </a></li>-->
-<!--           <li><a href="leimujuhe.html">-->
-<!--            <span class="nav-select-icon-icon8"></span>-->
-<!--            <span class="nav-select-font">功能小件</span>-->
-<!--        </a></li>-->
-<!--        </ul>-->
+        <ul class="nav-select">
+            <li>
+                <a href="#">
+                    <span class="nav-select-icon-icon5"></span>
+                    <span class="nav-select-font">工具/其他</span>
+                </a>
+            </li>
+           <li><a href="/leimujuhe">
+            <span class="nav-select-icon-icon6"></span>
+            <span class="nav-select-font">维修养护</span>
+               </a></li>
+               <li><a href="/leimujuhe">
+                <span class="nav-select-icon-icon7"></span>
+                <span class="nav-select-font">美容清洗</span>
+           </a></li>
+           <li><a href="/leimujuhe">
+            <span class="nav-select-icon-icon8"></span>
+            <span class="nav-select-font">功能小件</span>
+        </a></li>
+        </ul>
     </div>
     <!-- 限时抢购 -->
     <div class="timer">
@@ -131,7 +132,7 @@
         </div>  
         <ul class="mian_bd">
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -139,7 +140,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -147,7 +148,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -155,7 +156,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -163,7 +164,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -171,7 +172,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -185,7 +186,7 @@
         </div>  
         <ul class="mian_bd">
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -193,7 +194,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -201,7 +202,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -209,7 +210,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -217,7 +218,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -225,7 +226,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -239,7 +240,7 @@
         </div>  
         <ul class="mian_bd">
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -247,7 +248,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -255,7 +256,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -263,7 +264,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -271,7 +272,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -279,7 +280,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -293,7 +294,7 @@
         </div>  
         <ul class="mian_bd">
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -301,7 +302,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -309,7 +310,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -317,7 +318,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -325,7 +326,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -333,7 +334,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -347,7 +348,7 @@
         </div>  
         <ul class="mian_bd">
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -355,7 +356,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -363,7 +364,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -371,7 +372,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -379,7 +380,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -387,7 +388,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -401,7 +402,7 @@
         </div>  
         <ul class="mian_bd">
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -409,7 +410,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -417,7 +418,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -425,7 +426,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -433,7 +434,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>
@@ -441,7 +442,7 @@
                 </a>
             </li>
             <li>
-                <a href="goodsDetail.html">
+                <a href="/goodsDetail">
                     <div class="img1">
                     </div>
                     <p>车载吸尘器车用家用车两用大功率汽车内强力</p>

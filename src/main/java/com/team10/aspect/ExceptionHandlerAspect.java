@@ -30,7 +30,6 @@ public class ExceptionHandlerAspect {
 	@Before(value="execution(* com.team10.handler.GlobalExceptionHandler.*(..))")
 	public void beforeExceptionHandler(JoinPoint joinPoint){
 		ExceptionLog exceptionLog = new ExceptionLog();
-
 		//获取Exception e 这个变量
 		Object[] args = joinPoint.getArgs();
 		for(Object o : args) {

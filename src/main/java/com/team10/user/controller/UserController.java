@@ -41,12 +41,6 @@ public class UserController {
         return "/user/index";
     }
 
-
-    @RequestMapping("/")
-    public String index1() {
-        return "index";
-    }
-
     //跳到登录页
     //@CarLog
     @RequestMapping(value = {"/login", "/unauth"})

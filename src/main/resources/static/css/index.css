@@ -2,7 +2,7 @@ body{
     width: 100%;
     min-width: 320px;
     max-width: 640px;  
-    margin: 0auto;
+    margin: 0 auto;
     font-size: 14px;
     font-family: PingFang SC;
     color: #666;

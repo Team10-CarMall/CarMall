@@ -19,60 +19,62 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dc38ec0-4e0d-4f62-9bcd-cb7bd965ae5e" name="Default Changelist" comment="7.13 23.25 修改了部分">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/team10/settings/mapper/ExceptionLogMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/team10/settings/mapper/ExceptionLogMapper.xml" afterDir="false" />
+    <list default="true" id="5dc38ec0-4e0d-4f62-9bcd-cb7bd965ae5e" name="Default Changelist" comment="7.14 00：44 合并代码">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2021_7_7_10_20_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2021_7_7_10_20__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2021_7_7_9_49_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2021_7_7_9_49__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/JumpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/JumpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/TestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/annotation/NullCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/annotation/NullCheck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/aspect/ExceptionHandlerAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/aspect/ExceptionHandlerAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/aspect/NullCheckAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/aspect/NullCheckAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/config/PersistentTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/config/PersistentTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/config/RedisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/enums/GoodsState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/enums/GoodsState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/enums/OrderState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/enums/OrderState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/enums/ReturnCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/enums/ReturnCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/enums/UserState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/enums/UserState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/goods/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/goods/controller/GoodsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/goods/mapper/GoodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/goods/mapper/GoodsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/goods/model/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/goods/model/Goods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/goods/model/GoodsUnion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/goods/model/GoodsUnion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/handler/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/order/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/order/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/order/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/settings/controller/DicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/settings/controller/DicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/settings/mapper/DicSubTypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/settings/mapper/DicSubTypeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/settings/mapper/DicSubTypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/settings/mapper/DicSubTypeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/settings/mapper/DicTypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/settings/mapper/DicTypeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/settings/model/DicSubType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/settings/model/DicSubType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/settings/model/DicType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/settings/model/DicType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/settings/model/ExceptionLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/settings/model/ExceptionLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/settings/service/DicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/settings/service/DicService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/settings/service/LogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/settings/service/LogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/settings/service/impl/LogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/settings/service/impl/LogServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/user/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/util/ExceptionUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/util/IdUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/util/IdUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/util/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/util/MD5Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/util/RedisUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/util/RedisUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/util/ReflectUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/util/ReflectUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/util/ReturnDataUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/util/ReturnDataUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/util/ServletUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/util/ServletUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/util/SpringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/util/SpringUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/util/TimeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/util/TimeUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/util/UrlUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/util/UrlUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team10/order/controller/OrderController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team10/order/mapper/OrderMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team10/order/mapper/OrderMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team10/order/model/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team10/order/response/EzOrderResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team10/order/response/HdOrderResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team10/order/service/OrderService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team10/order/service/impl/OrderServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team10/user/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-lzp.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-lzp.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/normalize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/swiper.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/swiper.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/下单详情页.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/下单详情页.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/商品详情.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/商品详情.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/我的.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/我的.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/我的地址-新增.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/我的地址-新增.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/我的地址-编辑.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/我的地址-编辑.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/我的地址.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/我的地址.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/我的订单.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/我的订单.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/登陆.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/登陆.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/类目聚合页.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/类目聚合页.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fonts/icomoon.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/icomoon.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fonts/icomoon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/icomoon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fonts/icomoon.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/icomoon.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fonts/icomoon.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/icomoon.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/Eyes-closed.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/Eyes-closed.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/Eyes.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/Eyes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/banner首页.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/banner首页.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/common_icon_tabbar_choose_car_unselect@1x.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/common_icon_tabbar_choose_car_unselect@1x.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/good1.dpg.webp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/good1.dpg.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/icon_功能小件@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/icon_功能小件@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/icon_汽车装饰@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/icon_汽车装饰@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/icon_维修养护@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/icon_维修养护@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/icon_美容清洗@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/icon_美容清洗@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/icon_行车安全@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/icon_行车安全@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/icon_车行辅助@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/icon_车行辅助@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/icon_车载电器@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/icon_车载电器@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/jd充电器.dpg.webp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/jd充电器.dpg.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/个人.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/个人.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/其他@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/其他@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/向左.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/向左.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/向左箭头-黑色.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/向左箭头-黑色.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/向左箭头jd.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/向左箭头jd.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/商城.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/商城.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/已收藏.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/已收藏.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/收藏.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/收藏.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/编组.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/编组.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/编辑.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/编辑.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/订单.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/订单.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/飞科剃须刀.dpg.webp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/飞科剃须刀.dpg.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/默认头像@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/默认头像@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/leimujuhe.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/leimujuhe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/upload/jd行车辅助.webp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/upload/jd行车辅助.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/upload/车载电器.dpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/upload/车载电器.dpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,17 +157,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../FleaMarket" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SpringBoot" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\ideaWorkspace\CarMall\CarMall\src\main\resources\static" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.team10" />
     </key>
@@ -249,7 +254,10 @@
       <workItem from="1626007791087" duration="83000" />
       <workItem from="1626008162529" duration="7292000" />
       <workItem from="1626077070975" duration="1040000" />
-      <workItem from="1626156250272" duration="12479000" />
+      <workItem from="1626156250272" duration="16597000" />
+      <workItem from="1626243460007" duration="1280000" />
+      <workItem from="1626280408683" duration="437000" />
+      <workItem from="1626339952204" duration="3504000" />
     </task>
     <task id="LOCAL-00001" summary="7.9 16.31 提交">
       <created>1625820338348</created>
@@ -300,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626189973255</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="7.14 00：44 合并代码">
+      <created>1626194679234</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1626194679234</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +403,8 @@
     <MESSAGE value="7.11 19:00 商品模块基本实现" />
     <MESSAGE value="7.11 19:39 合并代码" />
     <MESSAGE value="7.13 23.25 修改了部分" />
-    <option name="LAST_COMMIT_MESSAGE" value="7.13 23.25 修改了部分" />
+    <MESSAGE value="7.14 00：44 合并代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="7.14 00：44 合并代码" />
   </component>
   <component name="WindowStateProjectService">
     <state x="218" y="87" width="927" height="631" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626164941019">
@@ -422,84 +438,84 @@
       <screen x="0" y="0" width="1676" height="902" />
     </state>
     <state x="159" y="72" key="DiffContextDialog/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626002140322" />
-    <state x="218" y="152" key="FileChooserDialogImpl" timestamp="1626190753751">
+    <state x="218" y="152" key="FileChooserDialogImpl" timestamp="1626410244757">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state x="291" y="184" key="FileChooserDialogImpl/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626012110425" />
     <state x="617" y="205" key="FileChooserDialogImpl/0.0.1676.902@0.0.1676.902" timestamp="1625802655243" />
-    <state x="218" y="152" key="FileChooserDialogImpl/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626190753750" />
-    <state width="1213" height="199" key="GridCell.Tab.0.bottom" timestamp="1626194601884">
+    <state x="218" y="152" key="FileChooserDialogImpl/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410244757" />
+    <state width="1212" height="187" key="GridCell.Tab.0.bottom" timestamp="1626410482764">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="255" key="GridCell.Tab.0.bottom/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014446891" />
     <state width="1632" height="255" key="GridCell.Tab.0.bottom/0.0.1676.902@0.0.1676.902" timestamp="1626078115185" />
-    <state width="1213" height="199" key="GridCell.Tab.0.bottom/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626194601884" />
-    <state width="1213" height="199" key="GridCell.Tab.0.center" timestamp="1626194601883">
+    <state width="1212" height="187" key="GridCell.Tab.0.bottom/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482764" />
+    <state width="1212" height="187" key="GridCell.Tab.0.center" timestamp="1626410482764">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="255" key="GridCell.Tab.0.center/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014446891" />
     <state width="1632" height="255" key="GridCell.Tab.0.center/0.0.1676.902@0.0.1676.902" timestamp="1626078115185" />
-    <state width="1213" height="199" key="GridCell.Tab.0.center/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626194601883" />
-    <state width="1213" height="199" key="GridCell.Tab.0.left" timestamp="1626194601883">
+    <state width="1212" height="187" key="GridCell.Tab.0.center/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482764" />
+    <state width="1212" height="187" key="GridCell.Tab.0.left" timestamp="1626410482763">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="255" key="GridCell.Tab.0.left/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014446891" />
     <state width="1632" height="255" key="GridCell.Tab.0.left/0.0.1676.902@0.0.1676.902" timestamp="1626078115185" />
-    <state width="1213" height="199" key="GridCell.Tab.0.left/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626194601883" />
-    <state width="1213" height="199" key="GridCell.Tab.0.right" timestamp="1626194601883">
+    <state width="1212" height="187" key="GridCell.Tab.0.left/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482763" />
+    <state width="1212" height="187" key="GridCell.Tab.0.right" timestamp="1626410482764">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="255" key="GridCell.Tab.0.right/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014446891" />
     <state width="1632" height="255" key="GridCell.Tab.0.right/0.0.1676.902@0.0.1676.902" timestamp="1626078115185" />
-    <state width="1213" height="199" key="GridCell.Tab.0.right/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626194601883" />
-    <state width="1213" height="206" key="GridCell.Tab.1.bottom" timestamp="1626165881467">
+    <state width="1212" height="187" key="GridCell.Tab.0.right/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482764" />
+    <state width="1212" height="187" key="GridCell.Tab.1.bottom" timestamp="1626410482643">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="264" key="GridCell.Tab.1.bottom/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014260541" />
     <state width="1632" height="264" key="GridCell.Tab.1.bottom/0.0.1676.902@0.0.1676.902" timestamp="1626048284937" />
-    <state width="1213" height="206" key="GridCell.Tab.1.bottom/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626165881467" />
-    <state width="1213" height="206" key="GridCell.Tab.1.center" timestamp="1626165881467">
+    <state width="1212" height="187" key="GridCell.Tab.1.bottom/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482643" />
+    <state width="1212" height="187" key="GridCell.Tab.1.center" timestamp="1626410482643">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="264" key="GridCell.Tab.1.center/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014260541" />
     <state width="1632" height="264" key="GridCell.Tab.1.center/0.0.1676.902@0.0.1676.902" timestamp="1626048284937" />
-    <state width="1213" height="206" key="GridCell.Tab.1.center/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626165881467" />
-    <state width="1213" height="206" key="GridCell.Tab.1.left" timestamp="1626165881467">
+    <state width="1212" height="187" key="GridCell.Tab.1.center/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482643" />
+    <state width="1212" height="187" key="GridCell.Tab.1.left" timestamp="1626410482643">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="264" key="GridCell.Tab.1.left/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014260541" />
     <state width="1632" height="264" key="GridCell.Tab.1.left/0.0.1676.902@0.0.1676.902" timestamp="1626048284937" />
-    <state width="1213" height="206" key="GridCell.Tab.1.left/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626165881467" />
-    <state width="1213" height="206" key="GridCell.Tab.1.right" timestamp="1626165881467">
+    <state width="1212" height="187" key="GridCell.Tab.1.left/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482643" />
+    <state width="1212" height="187" key="GridCell.Tab.1.right" timestamp="1626410482643">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="264" key="GridCell.Tab.1.right/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014260541" />
     <state width="1632" height="264" key="GridCell.Tab.1.right/0.0.1676.902@0.0.1676.902" timestamp="1626048284937" />
-    <state width="1213" height="206" key="GridCell.Tab.1.right/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626165881467" />
-    <state width="1213" height="206" key="GridCell.Tab.2.bottom" timestamp="1626165881467">
+    <state width="1212" height="187" key="GridCell.Tab.1.right/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482643" />
+    <state width="1212" height="187" key="GridCell.Tab.2.bottom" timestamp="1626410482644">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="195" key="GridCell.Tab.2.bottom/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014160813" />
     <state width="1632" height="292" key="GridCell.Tab.2.bottom/0.0.1676.902@0.0.1676.902" timestamp="1625882827632" />
-    <state width="1213" height="206" key="GridCell.Tab.2.bottom/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626165881467" />
-    <state width="1213" height="206" key="GridCell.Tab.2.center" timestamp="1626165881467">
+    <state width="1212" height="187" key="GridCell.Tab.2.bottom/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482644" />
+    <state width="1212" height="187" key="GridCell.Tab.2.center" timestamp="1626410482644">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="195" key="GridCell.Tab.2.center/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014160813" />
     <state width="1632" height="292" key="GridCell.Tab.2.center/0.0.1676.902@0.0.1676.902" timestamp="1625882827632" />
-    <state width="1213" height="206" key="GridCell.Tab.2.center/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626165881467" />
-    <state width="1213" height="206" key="GridCell.Tab.2.left" timestamp="1626165881467">
+    <state width="1212" height="187" key="GridCell.Tab.2.center/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482644" />
+    <state width="1212" height="187" key="GridCell.Tab.2.left" timestamp="1626410482643">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="195" key="GridCell.Tab.2.left/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014160813" />
     <state width="1632" height="292" key="GridCell.Tab.2.left/0.0.1676.902@0.0.1676.902" timestamp="1625882827632" />
-    <state width="1213" height="206" key="GridCell.Tab.2.left/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626165881467" />
-    <state width="1213" height="206" key="GridCell.Tab.2.right" timestamp="1626165881467">
+    <state width="1212" height="187" key="GridCell.Tab.2.left/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482643" />
+    <state width="1212" height="187" key="GridCell.Tab.2.right" timestamp="1626410482644">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="195" key="GridCell.Tab.2.right/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014160813" />
     <state width="1632" height="292" key="GridCell.Tab.2.right/0.0.1676.902@0.0.1676.902" timestamp="1625882827632" />
-    <state width="1213" height="206" key="GridCell.Tab.2.right/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626165881467" />
+    <state width="1212" height="187" key="GridCell.Tab.2.right/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482644" />
     <state width="1213" height="206" key="GridCell.Tab.3.bottom" timestamp="1626163781838">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
@@ -546,21 +562,23 @@
       <screen x="0" y="0" width="1676" height="902" />
     </state>
     <state x="503" y="170" key="RollbackChangesDialog/0.0.1676.902@0.0.1676.902" timestamp="1625802334137" />
-    <state x="317" y="25" key="SettingsEditor" timestamp="1626007655464">
-      <screen x="0" y="0" width="1676" height="902" />
+    <state x="238" y="21" key="SettingsEditor" timestamp="1626244784565">
+      <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state x="317" y="25" key="SettingsEditor/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626007655464" />
     <state x="317" y="25" key="SettingsEditor/0.0.1676.902@0.0.1676.902" timestamp="1625883028101" />
+    <state x="238" y="21" key="SettingsEditor/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626244784565" />
     <state x="425" y="133" key="VCS.ChangeListViewerDialog" timestamp="1626190205837">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state x="566" y="161" key="VCS.ChangeListViewerDialog/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626001186497" />
     <state x="425" y="133" key="VCS.ChangeListViewerDialog/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626190205837" />
-    <state x="429" y="183" key="Vcs.Push.Dialog.v2" timestamp="1626003590863">
-      <screen x="0" y="0" width="1676" height="902" />
+    <state x="322" y="151" key="Vcs.Push.Dialog.v2" timestamp="1626194703035">
+      <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state x="429" y="183" key="Vcs.Push.Dialog.v2/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626003590863" />
     <state x="429" y="183" key="Vcs.Push.Dialog.v2/0.0.1676.902@0.0.1676.902" timestamp="1625883231527" />
+    <state x="322" y="151" key="Vcs.Push.Dialog.v2/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626194703035" />
     <state x="490" y="299" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1626190216080">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
@@ -579,12 +597,12 @@
       <screen x="0" y="0" width="1676" height="902" />
     </state>
     <state x="612" y="162" key="git4idea.branch.GitSmartOperationDialog/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1625816816394" />
-    <state x="371" y="170" width="672" height="559" key="run.anything.popup" timestamp="1626194601819">
+    <state x="371" y="170" width="672" height="559" key="run.anything.popup" timestamp="1626410156710">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state x="494" y="206" width="672" height="677" key="run.anything.popup/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014442660" />
     <state x="494" y="206" width="672" height="677" key="run.anything.popup/0.0.1676.902@0.0.1676.902" timestamp="1626077076037" />
-    <state x="371" y="170" width="672" height="559" key="run.anything.popup/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626194601819" />
+    <state x="371" y="170" width="672" height="559" key="run.anything.popup/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410156710" />
     <state x="375" y="157" width="672" height="560" key="search.everywhere.popup" timestamp="1626194297099">
       <screen x="0" y="0" width="1257" height="744" />
     </state>

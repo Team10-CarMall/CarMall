@@ -11,6 +11,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class JumpController {
 
+	//跳转到主页
+	@RequestMapping("/")
+	public String index1() {
+		return "index";
+	}
+
 	//跳转到类目聚合页
 	@RequestMapping("/leimujuhe")
 	public String leimujuhe() {
