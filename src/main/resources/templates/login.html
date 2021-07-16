@@ -40,11 +40,28 @@
                         type : "post",
                         success : function (resp) {
                             if(resp.code === 1000) {
-                                alert(resp.token);
                                 window.localStorage.setItem("token", resp.token);
                                 window.location.href = "/my"
                             } else if(resp.code === 2999){
-                                alert("用户未注册！")
+                                $("#pwd").val(hex_md5($("#pwd").val()));
+                                $.ajax({
+                                    url : "/user/login",
+                                    data : {
+                                        "username" : $("#username").val(),
+                                        "password" : $("#pwd").val()
+                                    },
+                                    dataType : "json",
+                                    type : "post",
+                                    success : function (resp) {
+                                        if(resp.code === 1000) {
+                                            alert("已为您自动注册成功，点击确定跳转到用户页!");
+                                            window.localStorage.setItem("token", resp.token)
+                                            window.location.href = "/my";
+                                        } else {
+                                            alert("未知错误");
+                                        }
+                                    }
+                                })
                             } else {
                                 alert("账号或密码错误！");
                             }
