@@ -464,10 +464,37 @@
             <span class="bottom-footer-icon1"></span>
             <span class="bottom-footer-font">商城</span>
         </a></li>
-        <li><a href="my.html">
-            <span class="bottom-footer-icon2"></span>
-            <span class="bottom-footer-font">我的</span>
-        </a></li>
+        <li>
+            <script type="text/javascript">
+                $(function () {
+                    myPage();
+                })
+                function myPage() {
+                    $("#myPage").click(function () {
+                        $.ajax({
+                            url : "/myCheck",
+                            headers : {
+                                "token" : window.localStorage.getItem("token")
+                            },
+                            dataType : "json",
+                            type : "get",
+                            success : function (resp) {
+                                if(resp.code !== 1000) {
+                                    alert("你还未登录，点击确定为您跳转到登录页!");
+                                    window.location.href = "/loginTest"
+                                } else {
+                                    window.location.href = "/my"
+                                }
+                            }
+                        })
+                    })
+                }
+            </script>
+            <a id="myPage">
+                <span class="bottom-footer-icon2"></span>
+                <span class="bottom-footer-font">我的</span>
+            </a>
+        </li>
     </ul>  
     
 </body>

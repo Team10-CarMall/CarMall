@@ -19,62 +19,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dc38ec0-4e0d-4f62-9bcd-cb7bd965ae5e" name="Default Changelist" comment="7.14 00：44 合并代码">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2021_7_7_10_20_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2021_7_7_10_20__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2021_7_7_9_49_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2021_7_7_9_49__Default_Changelist_.xml" beforeDir="false" />
+    <list default="true" id="5dc38ec0-4e0d-4f62-9bcd-cb7bd965ae5e" name="Default Changelist" comment="7.16 12：48 后台实现了前端的页面跳转">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/JumpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/JumpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/aspect/ExceptionHandlerAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/aspect/ExceptionHandlerAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team10/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team10/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-lzp.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-lzp.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/normalize.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/swiper.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/swiper.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/下单详情页.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/下单详情页.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/商品详情.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/商品详情.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/我的.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/我的.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/我的地址-新增.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/我的地址-新增.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/我的地址-编辑.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/我的地址-编辑.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/我的地址.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/我的地址.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/我的订单.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/我的订单.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/登陆.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/登陆.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/类目聚合页.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/类目聚合页.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fonts/icomoon.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/icomoon.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fonts/icomoon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/icomoon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fonts/icomoon.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/icomoon.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fonts/icomoon.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/icomoon.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/Eyes-closed.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/Eyes-closed.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/Eyes.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/Eyes.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/banner首页.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/banner首页.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/common_icon_tabbar_choose_car_unselect@1x.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/common_icon_tabbar_choose_car_unselect@1x.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/good1.dpg.webp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/good1.dpg.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/icon_功能小件@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/icon_功能小件@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/icon_汽车装饰@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/icon_汽车装饰@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/icon_维修养护@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/icon_维修养护@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/icon_美容清洗@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/icon_美容清洗@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/icon_行车安全@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/icon_行车安全@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/icon_车行辅助@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/icon_车行辅助@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/icon_车载电器@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/icon_车载电器@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/jd充电器.dpg.webp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/jd充电器.dpg.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/个人.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/个人.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/其他@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/其他@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/向左.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/向左.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/向左箭头-黑色.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/向左箭头-黑色.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/向左箭头jd.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/向左箭头jd.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/商城.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/商城.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/已收藏.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/已收藏.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/收藏.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/收藏.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/编组.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/编组.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/编辑.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/编辑.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/订单.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/订单.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/飞科剃须刀.dpg.webp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/飞科剃须刀.dpg.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/默认头像@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/默认头像@2x.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/leimujuhe.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/leimujuhe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/upload/jd行车辅助.webp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/upload/jd行车辅助.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/upload/车载电器.dpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/upload/车载电器.dpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +206,7 @@
       <workItem from="1626156250272" duration="16597000" />
       <workItem from="1626243460007" duration="1280000" />
       <workItem from="1626280408683" duration="437000" />
-      <workItem from="1626339952204" duration="3504000" />
+      <workItem from="1626339952204" duration="6888000" />
     </task>
     <task id="LOCAL-00001" summary="7.9 16.31 提交">
       <created>1625820338348</created>
@@ -315,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626194679234</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="7.16 12：48 后台实现了前端的页面跳转">
+      <created>1626410937563</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1626410937563</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,14 +360,19 @@
     <MESSAGE value="7.11 19:39 合并代码" />
     <MESSAGE value="7.13 23.25 修改了部分" />
     <MESSAGE value="7.14 00：44 合并代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="7.14 00：44 合并代码" />
+    <MESSAGE value="7.16 12：48 后台实现了前端的页面跳转" />
+    <option name="LAST_COMMIT_MESSAGE" value="7.16 12：48 后台实现了前端的页面跳转" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="218" y="87" width="927" height="631" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626164941019">
+    <state x="218" y="87" width="927" height="631" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626413717565">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state x="291" y="105" width="1092" height="765" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626009232316" />
-    <state x="218" y="87" width="927" height="631" key="#com.intellij.execution.impl.EditConfigurationsDialog/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626164941019" />
+    <state x="218" y="87" width="927" height="631" key="#com.intellij.execution.impl.EditConfigurationsDialog/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626413717565" />
+    <state x="375" y="172" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1626410814431">
+      <screen x="0" y="0" width="1257" height="744" />
+    </state>
+    <state x="375" y="172" key="#com.intellij.fileTypes.FileTypeChooser/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410814431" />
     <state x="482" y="111" key="#com.intellij.ide.util.MemberChooser" timestamp="1626190562954">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
@@ -444,78 +405,78 @@
     <state x="291" y="184" key="FileChooserDialogImpl/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626012110425" />
     <state x="617" y="205" key="FileChooserDialogImpl/0.0.1676.902@0.0.1676.902" timestamp="1625802655243" />
     <state x="218" y="152" key="FileChooserDialogImpl/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410244757" />
-    <state width="1212" height="187" key="GridCell.Tab.0.bottom" timestamp="1626410482764">
+    <state width="1212" height="217" key="GridCell.Tab.0.bottom" timestamp="1626414853832">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="255" key="GridCell.Tab.0.bottom/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014446891" />
     <state width="1632" height="255" key="GridCell.Tab.0.bottom/0.0.1676.902@0.0.1676.902" timestamp="1626078115185" />
-    <state width="1212" height="187" key="GridCell.Tab.0.bottom/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482764" />
-    <state width="1212" height="187" key="GridCell.Tab.0.center" timestamp="1626410482764">
+    <state width="1212" height="217" key="GridCell.Tab.0.bottom/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626414853832" />
+    <state width="1212" height="217" key="GridCell.Tab.0.center" timestamp="1626414853832">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="255" key="GridCell.Tab.0.center/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014446891" />
     <state width="1632" height="255" key="GridCell.Tab.0.center/0.0.1676.902@0.0.1676.902" timestamp="1626078115185" />
-    <state width="1212" height="187" key="GridCell.Tab.0.center/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482764" />
-    <state width="1212" height="187" key="GridCell.Tab.0.left" timestamp="1626410482763">
+    <state width="1212" height="217" key="GridCell.Tab.0.center/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626414853832" />
+    <state width="1212" height="217" key="GridCell.Tab.0.left" timestamp="1626414853832">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="255" key="GridCell.Tab.0.left/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014446891" />
     <state width="1632" height="255" key="GridCell.Tab.0.left/0.0.1676.902@0.0.1676.902" timestamp="1626078115185" />
-    <state width="1212" height="187" key="GridCell.Tab.0.left/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482763" />
-    <state width="1212" height="187" key="GridCell.Tab.0.right" timestamp="1626410482764">
+    <state width="1212" height="217" key="GridCell.Tab.0.left/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626414853832" />
+    <state width="1212" height="217" key="GridCell.Tab.0.right" timestamp="1626414853832">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="255" key="GridCell.Tab.0.right/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014446891" />
     <state width="1632" height="255" key="GridCell.Tab.0.right/0.0.1676.902@0.0.1676.902" timestamp="1626078115185" />
-    <state width="1212" height="187" key="GridCell.Tab.0.right/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482764" />
-    <state width="1212" height="187" key="GridCell.Tab.1.bottom" timestamp="1626410482643">
+    <state width="1212" height="217" key="GridCell.Tab.0.right/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626414853832" />
+    <state width="1212" height="217" key="GridCell.Tab.1.bottom" timestamp="1626414853708">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="264" key="GridCell.Tab.1.bottom/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014260541" />
     <state width="1632" height="264" key="GridCell.Tab.1.bottom/0.0.1676.902@0.0.1676.902" timestamp="1626048284937" />
-    <state width="1212" height="187" key="GridCell.Tab.1.bottom/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482643" />
-    <state width="1212" height="187" key="GridCell.Tab.1.center" timestamp="1626410482643">
+    <state width="1212" height="217" key="GridCell.Tab.1.bottom/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626414853708" />
+    <state width="1212" height="217" key="GridCell.Tab.1.center" timestamp="1626414853708">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="264" key="GridCell.Tab.1.center/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014260541" />
     <state width="1632" height="264" key="GridCell.Tab.1.center/0.0.1676.902@0.0.1676.902" timestamp="1626048284937" />
-    <state width="1212" height="187" key="GridCell.Tab.1.center/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482643" />
-    <state width="1212" height="187" key="GridCell.Tab.1.left" timestamp="1626410482643">
+    <state width="1212" height="217" key="GridCell.Tab.1.center/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626414853708" />
+    <state width="1212" height="217" key="GridCell.Tab.1.left" timestamp="1626414853707">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="264" key="GridCell.Tab.1.left/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014260541" />
     <state width="1632" height="264" key="GridCell.Tab.1.left/0.0.1676.902@0.0.1676.902" timestamp="1626048284937" />
-    <state width="1212" height="187" key="GridCell.Tab.1.left/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482643" />
-    <state width="1212" height="187" key="GridCell.Tab.1.right" timestamp="1626410482643">
+    <state width="1212" height="217" key="GridCell.Tab.1.left/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626414853707" />
+    <state width="1212" height="217" key="GridCell.Tab.1.right" timestamp="1626414853708">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="264" key="GridCell.Tab.1.right/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014260541" />
     <state width="1632" height="264" key="GridCell.Tab.1.right/0.0.1676.902@0.0.1676.902" timestamp="1626048284937" />
-    <state width="1212" height="187" key="GridCell.Tab.1.right/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482643" />
-    <state width="1212" height="187" key="GridCell.Tab.2.bottom" timestamp="1626410482644">
+    <state width="1212" height="217" key="GridCell.Tab.1.right/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626414853708" />
+    <state width="1212" height="217" key="GridCell.Tab.2.bottom" timestamp="1626414853708">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="195" key="GridCell.Tab.2.bottom/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014160813" />
     <state width="1632" height="292" key="GridCell.Tab.2.bottom/0.0.1676.902@0.0.1676.902" timestamp="1625882827632" />
-    <state width="1212" height="187" key="GridCell.Tab.2.bottom/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482644" />
-    <state width="1212" height="187" key="GridCell.Tab.2.center" timestamp="1626410482644">
+    <state width="1212" height="217" key="GridCell.Tab.2.bottom/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626414853708" />
+    <state width="1212" height="217" key="GridCell.Tab.2.center" timestamp="1626414853708">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="195" key="GridCell.Tab.2.center/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014160813" />
     <state width="1632" height="292" key="GridCell.Tab.2.center/0.0.1676.902@0.0.1676.902" timestamp="1625882827632" />
-    <state width="1212" height="187" key="GridCell.Tab.2.center/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482644" />
-    <state width="1212" height="187" key="GridCell.Tab.2.left" timestamp="1626410482643">
+    <state width="1212" height="217" key="GridCell.Tab.2.center/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626414853708" />
+    <state width="1212" height="217" key="GridCell.Tab.2.left" timestamp="1626414853708">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="195" key="GridCell.Tab.2.left/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014160813" />
     <state width="1632" height="292" key="GridCell.Tab.2.left/0.0.1676.902@0.0.1676.902" timestamp="1625882827632" />
-    <state width="1212" height="187" key="GridCell.Tab.2.left/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482643" />
-    <state width="1212" height="187" key="GridCell.Tab.2.right" timestamp="1626410482644">
+    <state width="1212" height="217" key="GridCell.Tab.2.left/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626414853708" />
+    <state width="1212" height="217" key="GridCell.Tab.2.right" timestamp="1626414853708">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state width="1632" height="195" key="GridCell.Tab.2.right/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014160813" />
     <state width="1632" height="292" key="GridCell.Tab.2.right/0.0.1676.902@0.0.1676.902" timestamp="1625882827632" />
-    <state width="1212" height="187" key="GridCell.Tab.2.right/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410482644" />
+    <state width="1212" height="217" key="GridCell.Tab.2.right/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626414853708" />
     <state width="1213" height="206" key="GridCell.Tab.3.bottom" timestamp="1626163781838">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
@@ -573,12 +534,12 @@
     </state>
     <state x="566" y="161" key="VCS.ChangeListViewerDialog/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626001186497" />
     <state x="425" y="133" key="VCS.ChangeListViewerDialog/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626190205837" />
-    <state x="322" y="151" key="Vcs.Push.Dialog.v2" timestamp="1626194703035">
+    <state x="322" y="151" key="Vcs.Push.Dialog.v2" timestamp="1626410966715">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state x="429" y="183" key="Vcs.Push.Dialog.v2/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626003590863" />
     <state x="429" y="183" key="Vcs.Push.Dialog.v2/0.0.1676.902@0.0.1676.902" timestamp="1625883231527" />
-    <state x="322" y="151" key="Vcs.Push.Dialog.v2/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626194703035" />
+    <state x="322" y="151" key="Vcs.Push.Dialog.v2/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410966715" />
     <state x="490" y="299" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1626190216080">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
@@ -597,12 +558,12 @@
       <screen x="0" y="0" width="1676" height="902" />
     </state>
     <state x="612" y="162" key="git4idea.branch.GitSmartOperationDialog/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1625816816394" />
-    <state x="371" y="170" width="672" height="559" key="run.anything.popup" timestamp="1626410156710">
+    <state x="371" y="170" width="672" height="559" key="run.anything.popup" timestamp="1626410921786">
       <screen x="0" y="0" width="1257" height="744" />
     </state>
     <state x="494" y="206" width="672" height="677" key="run.anything.popup/0.0.1676.902/-1920.0.1676.902@0.0.1676.902" timestamp="1626014442660" />
     <state x="494" y="206" width="672" height="677" key="run.anything.popup/0.0.1676.902@0.0.1676.902" timestamp="1626077076037" />
-    <state x="371" y="170" width="672" height="559" key="run.anything.popup/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410156710" />
+    <state x="371" y="170" width="672" height="559" key="run.anything.popup/1440.0.1676.902/0.0.1257.744@0.0.1257.744" timestamp="1626410921786" />
     <state x="375" y="157" width="672" height="560" key="search.everywhere.popup" timestamp="1626194297099">
       <screen x="0" y="0" width="1257" height="744" />
     </state>

@@ -1,7 +1,10 @@
 package com.team10;
 
+import com.team10.util.ReturnDataUtil;
+import com.team10.util.TokenUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * 用于页面的跳转(作废)
@@ -30,9 +33,21 @@ public class JumpController {
 	}
 
 	//跳转到登录页
-	@RequestMapping("/login")
+	@RequestMapping("/loginTest")
 	public String login() {
 		return "login";
+	}
+
+	//跳转到我的页面前进行确认
+	@RequestMapping("/myCheck")
+	@ResponseBody
+	public Object myCheck() {
+		Boolean flag = TokenUtils.checkToken();
+		if(!flag) {
+			return ReturnDataUtil.getReturnMap(888, "用户未登录",null);
+		} else {
+			return ReturnDataUtil.getReturnMap(1000, "操作成功", null);
+		}
 	}
 
 	//跳转到我的页面
