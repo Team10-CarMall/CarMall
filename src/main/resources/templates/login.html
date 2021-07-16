@@ -45,7 +45,7 @@
                             } else if(resp.code === 2999){
                                 $("#pwd").val(hex_md5($("#pwd").val()));
                                 $.ajax({
-                                    url : "/user/login",
+                                    url : "/user/register",
                                     data : {
                                         "username" : $("#username").val(),
                                         "password" : $("#pwd").val()
