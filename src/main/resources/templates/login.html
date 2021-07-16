@@ -11,6 +11,7 @@
     <title>登陆</title>
 </head>
 <script src="jquery-3.5.1.js"></script>
+<script src="MD5.js"></script>
 <body>
     <div class="blank"></div>
     <!-- banner -->
@@ -28,6 +29,7 @@
             })
             function login() {
                 $("#btn").click(function () {
+                    $("#pwd").val(hex_md5($("#pwd").val()));
                     var formData = new FormData($("#loginForm")[0])
                     $.ajax({
                         url : "/user/login",

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * 用于页面的跳转(作废)
+ * 用于页面的跳转....
  * @Author LINZHIPIN
  * @CreateTime 2021/07/13/00013 16:23:20
  */
