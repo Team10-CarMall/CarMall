@@ -30,11 +30,12 @@
             function login() {
                 $("#btn").click(function () {
                     $("#pwd").val(hex_md5($("#pwd").val()));
-                    var formData = new FormData($("#loginForm")[0])
                     $.ajax({
                         url : "/user/login",
-                        data : formData,
-                        processData: false,
+                        data : {
+                            "username" : $("#username").val(),
+                            "password" : $("#pwd").val()
+                        },
                         dataType : "json",
                         type : "post",
                         success : function (resp) {
@@ -42,8 +43,10 @@
                                 alert(resp.token);
                                 window.localStorage.setItem("token", resp.token);
                                 window.location.href = "/my"
+                            } else if(resp.code === 2999){
+                                alert("用户未注册！")
                             } else {
-                                alert("账号或密码错误，请重试!");
+                                alert("账号或密码错误！");
                             }
                         }
                     })
@@ -57,7 +60,7 @@
 
     <form class="login_from" id="loginForm">
         <div class="input">
-            用户名<input type="text" placeholder="请输入您的用户名" name="username"><br>
+            用户名<input type="text" placeholder="请输入您的用户名" name="username" id="username"><br>
         </div>
         <div class="input">
             密 &nbsp;&nbsp;码<input type="password" placeholder="请输入您的密码" id="pwd" name="password"><br>

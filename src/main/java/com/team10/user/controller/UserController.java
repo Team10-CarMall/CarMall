@@ -9,6 +9,7 @@ import com.team10.user.model.Address;
 import com.team10.user.response.*;
 import com.team10.user.service.AddressService;
 import com.team10.user.service.UserService;
+import com.team10.util.MD5Util;
 import com.team10.util.TokenUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.DisabledAccountException;
@@ -51,13 +52,14 @@ public class UserController {
     //登录认证
     @CarLog
     @PostMapping("/user/login")
-    public TokenResponse login(String username,String password, ModelMap modelMap, HttpServletResponse response) {
+    public TokenResponse login(String username, String password, ModelMap modelMap, HttpServletResponse response) {
         String msg = "";
         int code = 1000;
         TokenResponse tokenResponse = new TokenResponse();
         try {
             if (!SecurityUtils.getSubject().isAuthenticated()) {
                 //这个token是shiro的token，不是给前端的token
+                password = MD5Util.getMD5(password);
                 UsernamePasswordToken token = new UsernamePasswordToken(username, password);
                 SecurityUtils.getSubject().login(token);
             }
